@@ -5,7 +5,7 @@
 .homepage-welcome-header{
   text-align: center;
 }
-.homepage-container{
+/*.homepage-container{
   text-align: center;
   margin: 10px 30px;
   display: flex;
@@ -15,4 +15,18 @@
 }
 .recently-asked-questions-homepage{
   flex-grow: 2;
+}*/
+
+@media (min-width: 600px) {
+  .homepage-container{
+    text-align: center;
+    margin: 10px 30px;
+    display: flex;
+  }
+  .popular-tags-homepage{
+    flex-grow: 1;
+  }
+  .recently-asked-questions-homepage{
+    flex-grow: 2;
+  }
 }
