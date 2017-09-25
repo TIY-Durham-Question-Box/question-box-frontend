@@ -41,7 +41,7 @@ export default class Register extends Component {
             placeholder="Password Again" name="secondpassword" value={this.state.secondpassword}/>
             <input onChange={this.handleTextChange} type="email" id="email"
             placeholder="Email" name="email" value={this.state.email}/>
-            <button type="submit">Register</button>
+            <button className="loginregister-submit-button" type="submit">Register</button>
           </form>
         </div>
       </div>

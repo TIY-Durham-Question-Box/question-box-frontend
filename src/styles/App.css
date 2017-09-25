@@ -38,8 +38,34 @@
 .login-register-switch-button:active{
   color: #0000FF;
 }
+.loginregister-form-holder{
+  border: 1px solid black;
+}
+.login-form-container input{
+  text-align: center;
+  margin: 10px 0;
+  display: block;
+  font-size: 20px;
+}
 
 @media (max-width: 600px) {
+  .loginregister-form-holder{
+    border: 0;
+  }
+  .login-form-container input{
+    margin: 5px 0;
+    font-size: 20px;
+  }
+  .login-form-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .loginregister-submit-button{
+    height: 50px;
+    width: 50%;
+    margin: 0 auto;
+  }
   .login-register-switches{
     font-size: 20px;
     display: flex;
