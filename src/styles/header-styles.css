@@ -11,3 +11,12 @@
 .logged-out{
   display: grid;
 }
+.header-logout-button{
+  background-color: orange;
+    height: 80%;
+    width: 80%;
+    color: black;
+    border: 3px solid grey;
+    border-radius: 10%;
+
+}
