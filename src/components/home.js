@@ -5,7 +5,22 @@ import Footer from './footer.js';
 import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+        testdata: false
+      };
+    }
+  // fetchData = () => {
+  componentWillMount(){
+    fetch('https://memorygameapi.herokuapp.com/stats').then(results => {
+      return results.json();
+    }).then(data => {
+      this.setState({ testdata: data})
+    })
+  }
   render() {
+    console.log(this.state.testdata);
     return (
       <div>
       <Header />
