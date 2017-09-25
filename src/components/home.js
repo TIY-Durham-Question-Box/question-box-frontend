@@ -11,11 +11,13 @@ export default class Home extends Component {
       <Header />
         <div className="home-component" >
           <h1>Welcome to Question Box!</h1>
-            <div>
+            <div className="homepage-container">
               <div className="popular-tags-homepage">
+                <h1>Popular Tags:</h1>
               </div>
               <div className="recently-asked-questions-homepage">
                 <button className="homepage-ask-a-question-button"><Link to="/addquestion">Add a Question</Link></button>
+                <h1>HERE IS A LIST OF QUESTIONS</h1>
               </div>
             </div>
         </div>
