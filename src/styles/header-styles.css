@@ -1,0 +1,13 @@
+.header-input-field{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  background-color: deepskyblue;
+}
+.logged-in{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-size: 12px;
+}
+.logged-out{
+  display: grid;
+}

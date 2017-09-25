@@ -11,21 +11,25 @@ export default class Header extends Component {
     let loggedInOrOut = null;
     if ("test"==="test"){
       loggedInOrOut =
-        <div>
+        <div className="logged-in">
           <HeaderGreeting />
           <HeaderLogout />
         </div>
 
     } else {
       loggedInOrOut =
+      <div className="logged-out">
         <HeaderLogin />
+      </div>
     }
-    
+
     return(
       <div className="header-component" >
         <h1>Question Box</h1>
-        <HeaderSearch />
-        {loggedInOrOut}
+        <div className="header-input-field">
+          <HeaderSearch />
+          {loggedInOrOut}
+        </div>
       </div>
     )
   }
