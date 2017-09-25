@@ -10,10 +10,13 @@
   margin: 10px 30px;
 }
 
+.loginregistrationpage-component{
+  
+}
+
 @media (min-width: 600px) {
   .homepage-container{
     text-align: center;
-    margin: 10px 30px;
     display: flex;
   }
   .popular-tags-homepage{
