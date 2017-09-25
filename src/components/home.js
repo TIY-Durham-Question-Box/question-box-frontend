@@ -10,8 +10,14 @@ export default class Home extends Component {
       <div>
       <Header />
         <div className="home-component" >
-          <h1>Home</h1>
-          <button className="homepage-ask-a-question-button"><Link to="/addquestion">Add a Question</Link></button>
+          <h1>Welcome to Question Box!</h1>
+            <div>
+              <div className="popular-tags-homepage">
+              </div>
+              <div className="recently-asked-questions-homepage">
+                <button className="homepage-ask-a-question-button"><Link to="/addquestion">Add a Question</Link></button>
+              </div>
+            </div>
         </div>
       <Footer />
       </div>
