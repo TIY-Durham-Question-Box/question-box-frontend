@@ -13,8 +13,8 @@ export default class LoginRegistrationPage extends Component {
       };
       this.switchpage = this.switchpage.bind(this);
     }
-  switchpage(x){
-    console.log(x);
+  switchpage(event){
+    console.log(event.target);
   }
   render() {
     return (
@@ -23,7 +23,7 @@ export default class LoginRegistrationPage extends Component {
         <div className="loginregistrationpage-component" >
         <h1>Login Registration Page</h1>
           <div className="login-register-switch">
-            <p><a onClick={this.switchpage("login")}>Login</a> | <a onClick={this.switchpage("register")}>Register</a></p>
+            <p><span id="login" onClick={this.switchpage}>Login</span> | <span id="register" onClick={this.switchpage}>Register</span></p>
           </div>
         </div>
       <Footer />
