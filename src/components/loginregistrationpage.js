@@ -9,14 +9,16 @@ export default class LoginRegistrationPage extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        pageswitch: "register"
+        showloginpage: false
       };
-      this.switchpage = this.switchpage.bind(this);
+      this.switchpagetologin = this.switchpagetologin.bind(this);
+      this.switchpagetoregister = this.switchpagetoregister.bind(this);
     }
-  switchpage(event){
-    if (event.target.id === "login" && event.target.id === "register"){
-      this.setState({ pageswitch: event.target.id });
-    }
+  switchpagetologin(event){
+    this.setState({ showloginpage: true });
+  }
+  switchpagetoregister(event){
+    this.setState({ showloginpage: false });
   }
   render() {
     return (
@@ -25,7 +27,8 @@ export default class LoginRegistrationPage extends Component {
         <div className="loginregistrationpage-component" >
         <h1>Login Registration Page</h1>
           <div className="login-register-switch">
-            <p><span id="login" onClick={this.switchpage}>Login</span> | <span id="register" onClick={this.switchpage}>Register</span></p>
+            {this.state.showloginpage ? <Login/> : <Register/>}
+            <p><span id="login" onClick={this.switchpagetologin}>Login</span> | <span id="register" onClick={this.switchpagetoregister}>Register</span></p>
           </div>
         </div>
       <Footer />
