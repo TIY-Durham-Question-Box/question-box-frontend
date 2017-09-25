@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 70% 30%;
   background-color: deepskyblue;
+  height: 38px;
+  padding: 2px;
 }
 .logged-in{
   display: grid;
@@ -13,10 +15,34 @@
 }
 .header-logout-button{
   background-color: orange;
-    height: 80%;
-    width: 80%;
-    color: black;
-    border: 3px solid grey;
-    border-radius: 10%;
+  height: 80%;
+  width: 80%;
+  color: black;
+  border: 3px solid grey;
+  border-radius: 10%;
+}
+.header-search-button{
+  background-color: grey;
+  width: 21%;
+  color: black;
+  border: none;
+  height: 38px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.header-search-form{
+  border-radius: 8px;
+  height: 38px;
+}
+.header-search-input{
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  height: 34px;
+  width: 77%;
+  border: none;
+  border: 1px solid grey;
+  border-right: none;
+}
+.header-search-bar{
 
 }
