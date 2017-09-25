@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 
-export default class QuestionFrom extends Component {
+export default class QuestionForm extends Component {
   render() {
-    <div className="questionform-component" >
-    </div>
+    return (
+      <div className="questionform-component" >
+      </div>
+    )
   }
 }

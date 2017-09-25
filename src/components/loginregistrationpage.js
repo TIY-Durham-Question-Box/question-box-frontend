@@ -5,7 +5,9 @@ import Register from './register.js';
 
 export default class LoginRegistrationPage extends Component {
   render() {
-    <div className="loginregistrationpage-component" >
-    </div>
+    return (
+      <div className="loginregistrationpage-component" >
+      </div>
+    )
   }
 }

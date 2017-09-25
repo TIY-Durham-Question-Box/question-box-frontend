@@ -3,7 +3,9 @@ import '../styles/App.css';
 
 export default class Register extends Component {
   render() {
-    <div className="register-component" >
-    </div>
+    return (
+      <div className="register-component" >
+      </div>
+    )
   }
 }

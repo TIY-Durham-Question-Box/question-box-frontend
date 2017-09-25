@@ -3,7 +3,9 @@ import '../styles/App.css';
 
 export default class Footer extends Component {
   render() {
-    <div className="footer-component" >
-    </div>
+    return(
+      <div className="footer-component" >
+      </div>
+    )
   }
 }

@@ -3,7 +3,9 @@ import '../styles/App.css';
 
 export default class Login extends Component {
   render() {
-    <div className="login-component" >
-    </div>
+    return (
+      <div className="login-component" >
+      </div>
+    )
   }
 }
