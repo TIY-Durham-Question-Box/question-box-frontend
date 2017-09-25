@@ -2,6 +2,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/*HOMEPAGE STYLES*/
 .homepage-welcome-header{
   text-align: center;
 }
@@ -9,11 +11,6 @@
   text-align: center;
   margin: 10px 30px;
 }
-
-.loginregistrationpage-component{
-  text-align: center;
-}
-
 @media (min-width: 600px) {
   .homepage-container{
     text-align: center;
@@ -25,4 +22,19 @@
   .recently-asked-questions-homepage{
     flex-grow: 2;
   }
+}
+
+/*LOGIN AND REGISTRATION STYLES*/
+.loginregistrationpage-component{
+  text-align: center;
+}
+.login-register-switch-button{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.login-register-switch-button:hover{
+  color: #5859FF;
+}
+.login-register-switch-button:active{
+  color: #0000FF;
 }

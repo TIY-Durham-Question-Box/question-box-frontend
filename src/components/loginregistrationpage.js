@@ -14,10 +14,10 @@ export default class LoginRegistrationPage extends Component {
       this.switchpagetologin = this.switchpagetologin.bind(this);
       this.switchpagetoregister = this.switchpagetoregister.bind(this);
     }
-  switchpagetologin(event){
+  switchpagetologin(){
     this.setState({ showloginpage: true });
   }
-  switchpagetoregister(event){
+  switchpagetoregister(){
     this.setState({ showloginpage: false });
   }
   render() {
@@ -25,10 +25,10 @@ export default class LoginRegistrationPage extends Component {
       <div>
       <Header />
         <div className="loginregistrationpage-component" >
-        <h1>Login Registration Page</h1>
+        <h1>Login/Registration Page</h1>
           <div className="login-register-switch">
             {this.state.showloginpage ? <Login/> : <Register/>}
-            <p><span id="login" onClick={this.switchpagetologin}>Login</span> | <span id="register" onClick={this.switchpagetoregister}>Register</span></p>
+            <p><span className="login-register-switch-button" onClick={this.switchpagetologin}>Login</span> | <span className="login-register-switch-button" onClick={this.switchpagetoregister}>Register</span></p>
           </div>
         </div>
       <Footer />
