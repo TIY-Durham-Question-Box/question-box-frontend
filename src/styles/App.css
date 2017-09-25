@@ -38,25 +38,34 @@
 .login-register-switch-button:active{
   color: #0000FF;
 }
-.loginregister-form-holder{
+.loginregister-form-container{
   border: 1px solid black;
+  margin: 0 auto;
 }
 .loginregister-form-container input{
   text-align: center;
   margin: 10px 0;
-  display: block;
+  display: inline;
   font-size: 15px;
 }
-
-@media (max-width: 600px) {
-  .loginregister-form-holder{
-    border: 0;
+.loginregister-submit-button{
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+@media (min-width: 600px){
+  .loginregister-form-container{
+    width: 350px;
   }
+}
+@media (max-width: 600px) {
   .loginregister-form-container input{
+    display: block;
     margin: 5px 0;
     font-size: 20px;
   }
   .loginregister-form-container{
+    border: 0;
     display: flex;
     flex-direction: column;
     margin: 0 20px;
