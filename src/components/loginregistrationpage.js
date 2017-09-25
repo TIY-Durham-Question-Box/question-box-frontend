@@ -9,7 +9,7 @@ export default class LoginRegistrationPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showloginpage: false
+      showloginpage: true
     };
     this.switchpagetologin = this.switchpagetologin.bind(this);
     this.switchpagetoregister = this.switchpagetoregister.bind(this);

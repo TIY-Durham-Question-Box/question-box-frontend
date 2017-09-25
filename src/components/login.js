@@ -13,7 +13,10 @@ export default class Login extends Component {
   }
   login(event){
     event.preventDefault();
-    console.log("login fired")
+    //Username to post:
+    console.log(event.target.username.value);
+    //Password to post:
+    console.log(event.target.password.value);
   }
   handleTextChange(event){
     event.preventDefault();
