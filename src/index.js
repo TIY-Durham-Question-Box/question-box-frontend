@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import LoginRegistrationPage from './components/loginregistrationpage.js';
 import QuestionForm from './components/questionform.js';

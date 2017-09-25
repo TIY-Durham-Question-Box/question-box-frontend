@@ -1,24 +1,25 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.homepage-welcome-header{
+  text-align: center;
+}
+.homepage-container{
+  text-align: center;
+  margin: 10px 30px;
+}
+
+@media (min-width: 600px) {
+  .homepage-container{
+    text-align: center;
+    margin: 10px 30px;
+    display: flex;
+  }
+  .popular-tags-homepage{
+    flex-grow: 1;
+  }
+  .recently-asked-questions-homepage{
+    flex-grow: 2;
+  }
 }
