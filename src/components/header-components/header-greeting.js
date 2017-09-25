@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import '../styles/App.css';
+import '../../styles/header-styles.css';
 
-export default class Header extends Component {
+export default class HeaderGreeting extends Component {
   render() {
     return(
-      <div className="header-component" >
+      <div className="header-greeting-component" >
+        Hello, User.
       </div>
     )
   }
