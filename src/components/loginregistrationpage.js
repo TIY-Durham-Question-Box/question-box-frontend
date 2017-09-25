@@ -14,7 +14,9 @@ export default class LoginRegistrationPage extends Component {
       this.switchpage = this.switchpage.bind(this);
     }
   switchpage(event){
-    console.log(event.target);
+    if (event.target.id === "login" && event.target.id === "register"){
+      this.setState({ pageswitch: event.target.id });
+    }
   }
   render() {
     return (
