@@ -7,13 +7,13 @@ import Register from './register.js';
 
 export default class LoginRegistrationPage extends Component {
   constructor(props) {
-      super(props);
-      this.state = {
-        showloginpage: false
-      };
-      this.switchpagetologin = this.switchpagetologin.bind(this);
-      this.switchpagetoregister = this.switchpagetoregister.bind(this);
-    }
+    super(props);
+    this.state = {
+      showloginpage: false
+    };
+    this.switchpagetologin = this.switchpagetologin.bind(this);
+    this.switchpagetoregister = this.switchpagetoregister.bind(this);
+  }
   switchpagetologin(){
     this.setState({ showloginpage: true });
   }

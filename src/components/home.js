@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
   constructor(props) {
-      super(props);
-      this.state = {
-        testdata: false
-      };
-    }
+    super(props);
+    this.state = {
+      testdata: false
+    };
+  }
   componentWillMount(){
     // fetch('https://memorygameapi.herokuapp.com/stats').then(results => {
     //   return results.json();
