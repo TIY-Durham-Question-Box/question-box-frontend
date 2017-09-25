@@ -10,7 +10,7 @@ export default class Home extends Component {
       <div>
       <Header />
         <div className="home-component" >
-          <h1>Welcome to Question Box!</h1>
+          <h1 className="homepage-welcome-header">Welcome to Question Box!</h1>
             <div className="homepage-container">
               <div className="popular-tags-homepage">
                 <h1>Popular Tags:</h1>

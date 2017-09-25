@@ -2,13 +2,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-.home-component h1{
+.homepage-welcome-header{
   text-align: center;
 }
 .homepage-container{
   text-align: center;
   margin: 10px 30px;
   display: flex;
+}
+.popular-tags-homepage{
+  flex-grow: 1;
 }
 .recently-asked-questions-homepage{
   flex-grow: 2;
