@@ -26,13 +26,14 @@ export default class Login extends Component {
     return (
       <div className="login-component">
         <div className="loginregister-form-holder">
+          <h2>Login</h2>
           <form className="loginregister-form-container" onSubmit={this.login}>
             <label htmlFor="username">Username:</label>
             <input onChange={this.handleTextChange} type="text" id="username"
-            placeholder="Username" name="username" value={this.state.username}/>
+            placeholder="Username" name="username" value={this.state.username}/><br/>
             <label htmlFor="password">Password:</label>
             <input onChange={this.handleTextChange} type="password" id="password"
-            placeholder="Password" name="password" value={this.state.password}/>
+            placeholder="Password" name="password" value={this.state.password}/><br/>
             <button className="loginregister-submit-button" type="submit">Login</button>
           </form>
         </div>
