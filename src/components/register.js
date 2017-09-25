@@ -29,8 +29,7 @@ export default class Register extends Component {
   }
   render() {
     return (
-      <div className="register-component" >
-        <h1>THIS IS THE REGISTER COMPONENT</h1>
+      <div className="register-component">
         <div className="loginregister-form-holder">
           <form className="loginregister-form-container" onSubmit={this.register}>
             <label htmlFor="username">Username:</label>

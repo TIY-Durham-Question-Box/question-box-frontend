@@ -24,8 +24,7 @@ export default class Login extends Component {
   }
   render() {
     return (
-      <div className="login-component" >
-        <h1>THIS IS THE LOGIN COMPONENT</h1>
+      <div className="login-component">
         <div className="loginregister-form-holder">
           <form className="loginregister-form-container" onSubmit={this.login}>
             <label htmlFor="username">Username:</label>
