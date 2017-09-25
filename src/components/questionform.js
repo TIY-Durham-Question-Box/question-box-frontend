@@ -9,7 +9,7 @@ export default class QuestionForm extends Component {
       <div>
       <Header />
         <div className="questionform-component" >
-        
+        <h1>Question Form</h1>
         </div>
       <Footer />
       </div>
