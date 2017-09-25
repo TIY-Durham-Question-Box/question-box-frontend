@@ -32,13 +32,17 @@ export default class Register extends Component {
       <div className="register-component" >
         <h1>THIS IS THE REGISTER COMPONENT</h1>
         <div className="loginregister-form-holder">
-          <form onSubmit={this.register}>
+          <form className="loginregister-form-container" onSubmit={this.register}>
+            <label htmlFor="username">Username:</label>
             <input onChange={this.handleTextChange} type="text" id="username"
             placeholder="Username" name="username" value={this.state.username}/>
+            <label htmlFor="password">Password:</label>
             <input onChange={this.handleTextChange} type="password" id="password"
             placeholder="Password" name="password" value={this.state.password}/>
+            <label htmlFor="secondpassword">Re-Enter Password:</label>
             <input onChange={this.handleTextChange} type="password" id="secondpassword"
             placeholder="Password Again" name="secondpassword" value={this.state.secondpassword}/>
+            <label htmlFor="email">Email:</label>
             <input onChange={this.handleTextChange} type="email" id="email"
             placeholder="Email" name="email" value={this.state.email}/>
             <button className="loginregister-submit-button" type="submit">Register</button>

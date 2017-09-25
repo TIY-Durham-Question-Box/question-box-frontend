@@ -41,7 +41,7 @@
 .loginregister-form-holder{
   border: 1px solid black;
 }
-.login-form-container input{
+.loginregister-form-container input{
   text-align: center;
   margin: 10px 0;
   display: block;
@@ -52,11 +52,11 @@
   .loginregister-form-holder{
     border: 0;
   }
-  .login-form-container input{
+  .loginregister-form-container input{
     margin: 5px 0;
     font-size: 20px;
   }
-  .login-form-container{
+  .loginregister-form-container{
     display: flex;
     flex-direction: column;
     margin: 0 20px;
@@ -64,7 +64,7 @@
   .loginregister-submit-button{
     height: 50px;
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
   }
   .login-register-switches{
     font-size: 20px;
