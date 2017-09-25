@@ -11,16 +11,15 @@ export default class Home extends Component {
         testdata: false
       };
     }
-  // fetchData = () => {
   componentWillMount(){
-    fetch('https://memorygameapi.herokuapp.com/stats').then(results => {
-      return results.json();
-    }).then(data => {
-      this.setState({ testdata: data})
-    })
+    // fetch('https://memorygameapi.herokuapp.com/stats').then(results => {
+    //   return results.json();
+    // }).then(data => {
+    //   this.setState({ testdata: data})
+    // })
   }
   render() {
-    console.log(this.state.testdata);
+    // console.log(this.state.testdata);
     return (
       <div>
       <Header />
