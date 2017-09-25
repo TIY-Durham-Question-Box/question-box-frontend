@@ -31,7 +31,7 @@ export default class Login extends Component {
             <input onChange={this.handleTextChange} type="text" id="username"
             placeholder="Username" value={this.state.username}/>
             <input onChange={this.handleTextChange} type="password" id="password"
-             name="password" value={this.state.password}/>
+            placeholder="Password" name="password" value={this.state.password}/>
             <button type="submit">Login</button>
           </form>
         </div>

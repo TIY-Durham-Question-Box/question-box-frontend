@@ -6,13 +6,22 @@ export default class Register extends Component {
     super(props);
     this.state = {
       username : "",
-      password: ""
+      password: "",
+      secondpassword: "",
+      email: ""
     }
+    this.handleTextChange = this.handleTextChange.bind(this);
     this.register = this.register.bind(this);
   }
   register(event){
     event.preventDefault();
     console.log("register fired");
+    //Username to post:
+    console.log(event.target.username.value);
+    //Password to post:
+    console.log(event.target.secondpassword.value);
+    //Email to post:
+    console.log(event.target.email.value);
   }
   handleTextChange(event){
     event.preventDefault();
@@ -25,9 +34,13 @@ export default class Register extends Component {
         <div className="loginregister-form-holder">
           <form onSubmit={this.register}>
             <input onChange={this.handleTextChange} type="text" id="username"
-            placeholder="Username" value={this.state.username}/>
+            placeholder="Username" name="username" value={this.state.username}/>
             <input onChange={this.handleTextChange} type="password" id="password"
-            name="password" value={this.state.password}/>
+            placeholder="Password" name="password" value={this.state.password}/>
+            <input onChange={this.handleTextChange} type="password" id="secondpassword"
+            placeholder="Password Again" name="secondpassword" value={this.state.secondpassword}/>
+            <input onChange={this.handleTextChange} type="email" id="email"
+            placeholder="Email" name="email" value={this.state.email}/>
             <button type="submit">Register</button>
           </form>
         </div>
