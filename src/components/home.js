@@ -9,6 +9,7 @@ export default class Home extends Component {
       <div>
       <Header />
         <div className="home-component" >
+        
         </div>
       <Footer />
       </div>

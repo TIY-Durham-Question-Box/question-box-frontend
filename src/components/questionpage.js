@@ -9,6 +9,7 @@ export default class QuestionPage extends Component {
       <div>
       <Header />
         <div className="questionpage-component" >
+        
         </div>
       <Footer />
       </div>

@@ -11,6 +11,7 @@ export default class LoginRegistrationPage extends Component {
       <div>
       <Header />
         <div className="loginregistrationpage-component" >
+        
         </div>
       <Footer />
       </div>
