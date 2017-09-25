@@ -1,9 +1,6 @@
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 
 /*HOMEPAGE STYLES*/
+
 .homepage-welcome-header{
   text-align: center;
 }
@@ -24,7 +21,10 @@
   }
 }
 
+
+
 /*LOGIN AND REGISTRATION STYLES*/
+
 .loginregistrationpage-component{
   text-align: center;
 }
@@ -37,4 +37,12 @@
 }
 .login-register-switch-button:active{
   color: #0000FF;
+}
+
+@media (max-width: 600px) {
+  .login-register-switches{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
 }
