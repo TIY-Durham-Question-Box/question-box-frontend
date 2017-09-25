@@ -8,7 +8,7 @@
   text-align: center;
   margin: 10px 30px;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .homepage-container{
     text-align: center;
     display: flex;
