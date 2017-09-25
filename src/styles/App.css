@@ -1,7 +1,6 @@
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
+/*HOMEPAGE STYLES*/
+
 .homepage-welcome-header{
   text-align: center;
 }
@@ -9,11 +8,9 @@
   text-align: center;
   margin: 10px 30px;
 }
-
 @media (min-width: 600px) {
   .homepage-container{
     text-align: center;
-    margin: 10px 30px;
     display: flex;
   }
   .popular-tags-homepage{
@@ -21,5 +18,59 @@
   }
   .recently-asked-questions-homepage{
     flex-grow: 2;
+  }
+}
+
+
+
+/*LOGIN AND REGISTRATION STYLES*/
+
+.loginregistrationpage-component{
+  text-align: center;
+}
+.login-register-switch-button{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.login-register-switch-button:hover{
+  color: #5859FF;
+}
+.login-register-switch-button:active{
+  color: #0000FF;
+}
+.loginregister-form-holder{
+  border: 1px solid black;
+}
+.loginregister-form-container input{
+  text-align: center;
+  margin: 10px 0;
+  display: block;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .loginregister-form-holder{
+    border: 0;
+  }
+  .loginregister-form-container input{
+    margin: 5px 0;
+    font-size: 20px;
+  }
+  .loginregister-form-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    font-size: 20px;
+  }
+  .loginregister-submit-button{
+    font-size: 20px;
+    padding: 10px 0;
+    width: 50%;
+    margin: 20px auto 0 auto;
+  }
+  .login-register-switches{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
   }
 }
