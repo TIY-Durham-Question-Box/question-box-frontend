@@ -28,11 +28,11 @@ export default class Home extends Component {
           <button className="homepage-ask-a-question-button"><Link to="/login">LOGIN TEST</Link></button>
             <div className="homepage-container">
               <div className="popular-tags-homepage">
-                <h1>Popular Tags:</h1>
+                <h3>Popular Tags:</h3>
               </div>
               <div className="recently-asked-questions-homepage">
                 <button className="homepage-ask-a-question-button"><Link to="/addquestion">Add a Question</Link></button>
-                <h1>HERE IS A LIST OF QUESTIONS</h1>
+                <h3>Recently Asked Questions:</h3>
               </div>
             </div>
         </div>
