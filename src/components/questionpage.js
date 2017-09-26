@@ -16,7 +16,7 @@ export default class QuestionPage extends Component {
       questionId: 1,
       title: "Question of Randos",
       language: "JavaScript",
-      tags: ['Question', 'Random'],
+      tags: 'Question, Random',
       question: "This is just some place holder text for the question.  This question is about JavaScript, specifically, it's about ECMAscript.  You know, cuz it's kinda cool to talk about random synonyms.",
       history: [
         // {
