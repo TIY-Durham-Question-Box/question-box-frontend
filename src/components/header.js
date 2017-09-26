@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/header-styles.css';
+import '../styles/App.css';
 import HeaderGreeting from './header-components/header-greeting.js';
 import HeaderLogin from './header-components/registration-login.js';
 import HeaderLogout from './header-components/logout-button.js';
@@ -26,9 +28,9 @@ export default class Header extends Component {
 
     return(
       <div className="header-component" >
-        <h1>
-          <img src={logo} alt="Logo" />
-          <div>Question Box</div>
+        <h1 className="header-top-logo">
+          <Link to="/"><img className="header-top-logo-img" src={logo} alt="Logo"/></Link>
+          <Link to="/" className="header-website-title"><div>Question Box</div></Link>
         </h1>
         <div className="header-input-field">
           <HeaderSearch />

@@ -1,5 +1,8 @@
 /*BREAKPOINT @ 600*/
-
+body{
+  margin: 0;
+  padding: 0;
+}
 /*HOMEPAGE STYLES*/
 
 .homepage-welcome-header{
@@ -9,7 +12,7 @@
   text-align: center;
   margin: 10px 30px;
 }
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .homepage-container{
     text-align: center;
     display: flex;
@@ -100,4 +103,13 @@
     width: 50%;
     margin: 20px auto 0 auto;
   }
+}
+
+/*HEADER STYLES*/
+.header-top-logo{
+  cursor: pointer;
+}
+.header-website-title{
+  text-decoration: none;
+  color: black;
 }
