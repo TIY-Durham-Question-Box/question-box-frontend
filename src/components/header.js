@@ -30,7 +30,7 @@ export default class Header extends Component {
       <div className="header-component" >
         <h1 className="header-top-logo">
           <Link to="/"><img className="header-top-logo-img" src={logo} alt="Logo"/></Link>
-          <Link to="/"><div>Question Box</div></Link>
+          <Link to="/" className="header-website-title"><div>Question Box</div></Link>
         </h1>
         <div className="header-input-field">
           <HeaderSearch />

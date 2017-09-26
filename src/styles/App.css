@@ -109,6 +109,7 @@ body{
 .header-top-logo{
   cursor: pointer;
 }
-a{
+.header-website-title{
   text-decoration: none;
+  color: black;
 }
