@@ -6,9 +6,9 @@ export default class QuestionForm extends Component {
     super(props);
     this.state = {
       title : "",
-      password: "",
-      secondpassword: "",
-      email: ""
+      question: "",
+      tags: "",
+      username: ""
     }
     this.handleTextChange = this.handleTextChange.bind(this);
     this.submitquestion = this.submitquestion.bind(this);
@@ -40,9 +40,9 @@ export default class QuestionForm extends Component {
           <textarea onChange={this.handleTextChange} type="text" id="question"
           placeholder="Type your question here" name="question" value={this.state.question}/><br/>
 
-          <label htmlFor="tags">Re-Enter Password:</label>
+          <label htmlFor="tags">Tags:</label>
           <input onChange={this.handleTextChange} type="text" id="tags"
-          placeholder="tags" name="tags" value={this.state.secondpassword}/><br/>
+          placeholder="tags" name="tags" value={this.state.tags}/><br/>
 
           <button className="question-form-submit" type="submit">Submit question</button>
         </form>
