@@ -1,3 +1,11 @@
+.header-component{
+  background-color: deepskyblue;
+}
+.header-component > h1{
+  color: ivory;
+  text-align: center;
+  margin: 4px;
+}
 .header-input-field{
   display: grid;
   grid-template-columns: 70% 30%;
