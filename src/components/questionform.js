@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import Header from './header.js';
-import Footer from './footer.js';
 
 export default class QuestionForm extends Component {
   constructor(props) {
@@ -32,7 +30,6 @@ export default class QuestionForm extends Component {
   render() {
     return (
       <div>
-      <Header />
         <div className="questionform-component" >
           <form className="question-form-container" onSubmit={this.register}>
           <h2>Question Form</h2>
@@ -51,7 +48,6 @@ export default class QuestionForm extends Component {
             <button className="question-form-submit" type="submit">Submit question</button>
           </form>
         </div>
-      <Footer />
       </div>
     )
   }
