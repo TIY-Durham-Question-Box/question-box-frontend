@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/question-page.css';
+import Answers from './questionpage-components/answers.js';
 
 export default class QuestionPage extends Component {
   constructor(){
@@ -15,7 +16,11 @@ export default class QuestionPage extends Component {
         {
           answerId: 1,
           user: "Ted",
-          answer: "Rambo was master of Randos.  Rhonda Rousey was cool for a time, too."
+          answer: "Rambo was master of randos.  Rhonda Rousey was cool for a time, too."
+        },{
+          answerId: 2,
+          user: "Jimbo",
+          answer: "Jimbo was master of jingos.  Meisha Tate was cooler."
         }
       ]
     }
@@ -38,13 +43,13 @@ export default class QuestionPage extends Component {
               Tags:
               <input type="text" value={this.state.tags} readOnly/>
             </p>
-            <p className="active-question-textarea">:
+            <p className="active-question-textarea">
+              Question:
               <textarea value={this.state.question} readOnly />
             </p>
-            <p>
-              Answer {this.state.history[0].answerId}:
-              <textarea readOnly value={this.state.history[0].answer} />
-            </p>
+              <Answers data={this.state.history}/>
+
+
           </div>
       </div>
     )
