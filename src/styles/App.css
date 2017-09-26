@@ -104,3 +104,8 @@ body{
     margin: 20px auto 0 auto;
   }
 }
+
+/*HEADER STYLES*/
+.header-top-logo{
+  cursor: pointer;
+}

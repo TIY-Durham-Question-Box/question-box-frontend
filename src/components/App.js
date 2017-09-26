@@ -9,12 +9,18 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 
 
-
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.reroute = this.reroute.bind(this);
+  }
+  reroute(){
+    console.log("boom");
+  }
   render() {
     return (
       <div>
-      <Header />
+      <Header reroute={this.reroute}/>
       <BrowserRouter>
         <Switch>
           <Route path="/login" component={LoginRegistrationPage} />
