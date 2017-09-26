@@ -39,7 +39,7 @@ export default class QuestionPage extends Component {
             </label>
             <label>
               Answer {this.state.history[0].answerId}:
-              <input type="area" value={this.state.history[0].answer} readOnly/>
+              <textarea readOnly>{this.state.history[0].answer}</textarea>
             </label>
           </div>
       </div>

@@ -1,0 +1,7 @@
+.questionpage-component{
+  display: flex;
+  flex-direction: column;
+}
+textarea{
+  width:70%;
+}
