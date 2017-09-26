@@ -29,10 +29,10 @@ export default class Login extends Component {
         <h2>Login</h2>
           <label htmlFor="username">Username:</label>
           <input onChange={this.handleTextChange} type="text" id="username"
-          placeholder="Username" name="username" value={this.state.username}/><br/>
+          placeholder="Username" name="username" value={this.state.username} required/><br/>
           <label htmlFor="password">Password:</label>
           <input onChange={this.handleTextChange} type="password" id="password"
-          placeholder="Password" name="password" value={this.state.password}/><br/>
+          placeholder="Password" name="password" value={this.state.password} required/><br/>
           <button className="loginregister-submit-button" type="submit">Login</button>
         </form>
       </div>
