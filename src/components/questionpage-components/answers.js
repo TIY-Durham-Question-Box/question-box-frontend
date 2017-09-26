@@ -6,11 +6,12 @@ export default class Answers extends Component {
   render() {
     console.log(this.props.data);
     return (
-      <div>
-        <div>
+      <div className="answer-component">
+        <div className="answer-attribution">
+          <div>Answer {this.props.data[0].answerId}</div>
+          <div>by {this.props.data[0].user}</div>
         </div>
-        <div>
-          Answer {this.props.data[0].answerId}, by {this.props.data[0].user}:
+        <div className="answer-body">
           <textarea readOnly value={this.props.data[0].answer}/>
         </div>
       </div>
