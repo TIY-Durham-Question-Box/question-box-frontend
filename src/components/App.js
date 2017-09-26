@@ -10,25 +10,22 @@ import '../styles/App.css';
 
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.reroute = this.reroute.bind(this);
-  }
-  reroute(){
-    console.log("boom");
-  }
   render() {
     return (
       <div>
-      <Header reroute={this.reroute}/>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/login" component={LoginRegistrationPage} />
-          <Route path="/addquestion" component={QuestionForm} />
-          <Route path="/viewquestion" component={QuestionPage} />
-          <Route path="/" component={Home}/>
-        </Switch>
-      </BrowserRouter>
+        <BrowserRouter>
+          <div>
+            <nav>
+              <Header/>
+            </nav>
+            <Switch>
+              <Route path="/login" component={LoginRegistrationPage} />
+              <Route path="/addquestion" component={QuestionForm} />
+              <Route path="/viewquestion" component={QuestionPage} />
+              <Route path="/" component={Home}/>
+            </Switch>
+          </div>
+        </BrowserRouter>
       <Footer />
       </div>
     );
