@@ -1,3 +1,19 @@
+.header-component{
+  background-color: deepskyblue;
+}
+.header-component > h1{
+  color: ivory;
+  text-align: center;
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.header-component > h1 > img{
+  margin-top: 4px;
+  height: 32px;
+  width: 32px;
+}
 .header-input-field{
   display: grid;
   grid-template-columns: 70% 30%;
@@ -10,15 +26,12 @@
   grid-template-columns: 50% 50%;
   font-size: 12px;
 }
-.logged-out{
-  display: grid;
-}
 .header-logout-button{
   background-color: orange;
-  height: 80%;
-  width: 80%;
+  height: 36px;
+  width: 96%;
   color: black;
-  border: 3px solid grey;
+  border: 1px solid grey;
   border-radius: 10%;
 }
 .header-search-button{
@@ -43,6 +56,16 @@
   border: 1px solid grey;
   border-right: none;
 }
-.header-search-bar{
-
+.logged-out{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.header-login-button{
+  background-color: orange;
+  height: 36px;
+  width: 80%;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 8px;
+  text-align: center;
 }
