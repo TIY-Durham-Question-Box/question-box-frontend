@@ -34,6 +34,12 @@
   border: 1px solid grey;
   border-radius: 10%;
 }
+.header-logout-button button{
+  height: 100%;
+  width: 100%;
+  background: 0;
+  border: 0;
+}
 .header-search-button{
   background-color: grey;
   width: 21%;
