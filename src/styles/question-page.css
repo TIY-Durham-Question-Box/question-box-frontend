@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
 }
+.active-question-textarea{
+  width: 90%;
+}
 textarea{
   width:70%;
 }
