@@ -27,6 +27,11 @@ export default class QuestionPage extends Component {
   }
 
   render() {
+    let allAnswers = this.state.history;
+    let answers = allAnswers.map((answers)=>{
+      return(<Answers data={answers}/>)
+    });
+
     return (
       <div>
           <div className="questionpage-component" >
@@ -47,9 +52,7 @@ export default class QuestionPage extends Component {
               Question:
               <textarea value={this.state.question} readOnly />
             </p>
-              <Answers data={this.state.history}/>
-
-
+              {answers}
           </div>
       </div>
     )
