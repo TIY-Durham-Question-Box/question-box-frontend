@@ -6,9 +6,9 @@ export default class QuestionForm extends Component {
     super(props);
     this.state = {
       title : "",
-      password: "",
-      secondpassword: "",
-      email: ""
+      question: "",
+      tags: "",
+      username: ""
     }
     this.handleTextChange = this.handleTextChange.bind(this);
     this.submitquestion = this.submitquestion.bind(this);
@@ -42,7 +42,7 @@ export default class QuestionForm extends Component {
 
           <label htmlFor="tags">Tags:</label>
           <input onChange={this.handleTextChange} type="text" id="tags"
-          placeholder="tags" name="tags" value={this.state.secondpassword}/><br/>
+          placeholder="tags" name="tags" value={this.state.tags}/><br/>
 
           <button className="question-form-submit-button" type="submit">Submit question</button>
         </form>
