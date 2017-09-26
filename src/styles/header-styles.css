@@ -9,7 +9,7 @@
   flex-direction: row;
   justify-content: space-around;
 }
-.header-component > h1 > img{
+.header-top-logo-img{
   margin-top: 4px;
   height: 32px;
   width: 32px;
