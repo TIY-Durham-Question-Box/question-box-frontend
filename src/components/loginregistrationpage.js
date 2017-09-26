@@ -26,7 +26,7 @@ export default class LoginRegistrationPage extends Component {
       <Header />
         <div className="loginregistrationpage-component" >
           <div className="login-register-switch">
-            <p className="login-register-switches"><span className="login-register-switch-button" onClick={this.switchpagetologin}>Login</span> | <span className="login-register-switch-button" onClick={this.switchpagetoregister}>Register</span></p>
+            <p className="login-register-switches"><span className="login-register-switch-button" onClick={this.switchpagetologin}>Login</span><span className="login-register-switch-button" onClick={this.switchpagetoregister}>Register</span></p>
             {this.state.showloginpage ? <Login/> : <Register/>}
           </div>
         </div>

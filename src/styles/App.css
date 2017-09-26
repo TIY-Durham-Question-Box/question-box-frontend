@@ -30,8 +30,9 @@
   margin: 30px 0;
 }
 .login-register-switch-button{
+  width: 50%;
+  height: 100%;
   cursor: pointer;
-  text-decoration: underline;
 }
 .login-register-switch-button:hover{
   color: #5859FF;
@@ -60,12 +61,16 @@
   justify-content: space-around;
 }
 @media (min-width: 600px){
+  .login-register-switch-button{
+    border: 1px solid black;
+    padding: 10px 0;
+  }
   .loginregister-form-container{
     width: 350px;
   }
   .login-register-switches{
     width: 350px;
-    margin: 10px auto 10px auto;
+    margin: 0 auto;
   }
 }
 @media (max-width: 600px) {
