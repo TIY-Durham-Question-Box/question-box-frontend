@@ -27,20 +27,18 @@
 
 .loginregistrationpage-component{
   text-align: center;
+  margin: 30px 0;
 }
 .login-register-switch-button{
+  width: 50%;
+  height: 100%;
   cursor: pointer;
-  text-decoration: underline;
 }
 .login-register-switch-button:hover{
   color: #5859FF;
 }
 .login-register-switch-button:active{
   color: #0000FF;
-}
-.loginregister-form-container{
-  border: 1px solid black;
-  margin: 0 auto;
 }
 .loginregister-form-container input{
   text-align: center;
@@ -53,9 +51,33 @@
   padding: 10px;
   margin: 10px;
 }
+.login-register-switches{
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+}
 @media (min-width: 600px){
+  .login-register-holder{
+    border: 1px solid black;
+    width: 350px;
+    margin: 0 auto;
+  }
+  .login-register-switch-button{
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+  }
+  .login-register-switch-button:nth-child(1){
+    border-right: 1px solid black;
+  }
   .loginregister-form-container{
     width: 350px;
+  }
+  .login-register-switches{
+    width: 350px;
+    margin: 0 auto;
+  }
+  #styling-for-active-button{
+    border-bottom: 1px solid white;
   }
 }
 @media (max-width: 600px) {
@@ -76,10 +98,5 @@
     padding: 10px 0;
     width: 50%;
     margin: 20px auto 0 auto;
-  }
-  .login-register-switches{
-    font-size: 20px;
-    display: flex;
-    justify-content: space-around;
   }
 }
