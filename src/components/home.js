@@ -29,6 +29,7 @@ export default class Home extends Component {
             <div className="recently-asked-questions-homepage">
               <button className="homepage-ask-a-question-button"><Link to="/addquestion">Add a Question</Link></button>
               <h3>Recently Asked Questions:</h3>
+              <button className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>
             </div>
           </div>
       </div>
