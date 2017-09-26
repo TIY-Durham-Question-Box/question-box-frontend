@@ -64,6 +64,32 @@ body{
   font-size: 15px;
 }
 @media (min-width: 600px){
+  .question-form-container{
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .question-form-container h2{
+    text-align: center;
+  }
+  .question-form-container label{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+  }
+  .question-form-container #question{
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    height: 100px;
+  }
+  .question-form-container #title{
+    width: 50%;
+  }
+  .question-form-container button{
+    height: 50px;
+    font-size: 15px;
+  }
   .login-register-holder{
     border: 1px solid black;
     width: 350px;

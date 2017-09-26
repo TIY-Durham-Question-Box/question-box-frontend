@@ -31,7 +31,7 @@ export default class QuestionForm extends Component {
     return (
       <div className="questionform-component" >
         <form className="question-form-container" onSubmit={this.submitquestion}>
-        <h2>Question Form</h2>
+        <h2>Ask a Question!</h2>
           <label htmlFor="title">Title:</label>
           <input onChange={this.handleTextChange} type="text" id="title"
           placeholder="Title" name="title" value={this.state.title}/><br/>
