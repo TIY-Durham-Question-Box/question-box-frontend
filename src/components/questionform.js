@@ -34,11 +34,11 @@ export default class QuestionForm extends Component {
         <h2>Ask a Question!</h2>
           <label htmlFor="title">Title:</label>
           <input onChange={this.handleTextChange} type="text" id="title"
-          placeholder="Title" name="title" value={this.state.title}/><br/>
+          placeholder="Title" name="title" value={this.state.title} required/><br/>
 
           <label htmlFor="question">Question:</label>
           <textarea onChange={this.handleTextChange} type="text" id="question" className="questionform-textarea"
-          placeholder="Type your question here" name="question" value={this.state.question}/><br/>
+          placeholder="Type your question here" name="question" value={this.state.question} required/><br/>
 
           <label htmlFor="tags">Tags:</label>
           <input onChange={this.handleTextChange} type="text" id="tags"

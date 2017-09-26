@@ -84,6 +84,7 @@ body{
     height: 100px;
   }
   .question-form-container #title{
+    text-align: left;
     width: 50%;
   }
   .question-form-container button{
