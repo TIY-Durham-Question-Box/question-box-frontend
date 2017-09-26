@@ -1,4 +1,4 @@
-.questionpage-component > p{
+.questionpage-component p{
   padding:6px;
   margin:2px;
 }
@@ -9,7 +9,7 @@
 .active-question-textarea{
   width: 90%;
 }
-.active-question-textarea > textarea{
+.active-question-textarea textarea{
   width:90%;
 }
 .answer-component{
@@ -21,7 +21,7 @@
 .answer-body{
   flex-grow: 1;
 }
-.answer-body > textarea{
+.answer-body textarea{
   width:90%;
   margin-left: 6px;
   padding-left: 6px;
