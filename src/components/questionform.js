@@ -37,14 +37,14 @@ export default class QuestionForm extends Component {
           placeholder="Title" name="title" value={this.state.title}/><br/>
 
           <label htmlFor="question">Question:</label>
-          <textarea onChange={this.handleTextChange} type="text" id="question"
+          <textarea onChange={this.handleTextChange} type="text" id="question" className="questionform-textarea"
           placeholder="Type your question here" name="question" value={this.state.question}/><br/>
 
-          <label htmlFor="tags">Re-Enter Password:</label>
+          <label htmlFor="tags">Tags:</label>
           <input onChange={this.handleTextChange} type="text" id="tags"
           placeholder="tags" name="tags" value={this.state.secondpassword}/><br/>
 
-          <button className="question-form-submit" type="submit">Submit question</button>
+          <button className="question-form-submit-button" type="submit">Submit question</button>
         </form>
       </div>
     )

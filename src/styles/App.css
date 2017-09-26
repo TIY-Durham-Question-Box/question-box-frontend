@@ -27,11 +27,17 @@ body{
 
 
 
-/*LOGIN AND REGISTRATION STYLES*/
+/*LOGIN AND REGISTRATION AND QUESTION STYLES*/
 
-.loginregistrationpage-component{
+.loginregistrationpage-component, .questionform-component{
   text-align: center;
   margin: 30px 0;
+}
+.loginregister-form-container input, .question-form-container input{
+  text-align: center;
+  margin: 10px 0;
+  display: inline;
+  font-size: 15px;
 }
 .login-register-switch-button{
   width: 50%;
@@ -44,12 +50,6 @@ body{
 .login-register-switch-button:active{
   color: #0000FF;
 }
-.loginregister-form-container input{
-  text-align: center;
-  margin: 10px 0;
-  display: inline;
-  font-size: 15px;
-}
 .loginregister-submit-button{
   font-size: 15px;
   padding: 10px;
@@ -59,6 +59,9 @@ body{
   font-size: 20px;
   display: flex;
   justify-content: space-around;
+}
+.questionform-textarea{
+  font-size: 15px;
 }
 @media (min-width: 600px){
   .login-register-holder{
@@ -90,18 +93,21 @@ body{
     margin: 5px 0;
     font-size: 20px;
   }
-  .loginregister-form-container{
+  .loginregister-form-container, .question-form-container{
     border: 0;
     display: flex;
     flex-direction: column;
     margin: 0 20px;
     font-size: 20px;
   }
-  .loginregister-submit-button{
+  .loginregister-submit-button, .question-form-submit-button{
     font-size: 20px;
     padding: 10px 0;
     width: 50%;
     margin: 20px auto 0 auto;
+  }
+  .questionform-textarea{
+    height: 50px;
   }
 }
 
