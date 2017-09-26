@@ -10,15 +10,12 @@
   grid-template-columns: 50% 50%;
   font-size: 12px;
 }
-.logged-out{
-  display: grid;
-}
 .header-logout-button{
   background-color: orange;
-  height: 80%;
-  width: 80%;
+  height: 36px;
+  width: 96%;
   color: black;
-  border: 3px solid grey;
+  border: 1px solid grey;
   border-radius: 10%;
 }
 .header-search-button{
@@ -43,6 +40,16 @@
   border: 1px solid grey;
   border-right: none;
 }
-.header-search-bar{
-
+.logged-out{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.header-login-button{
+  background-color: orange;
+  height: 36px;
+  width: 80%;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 8px;
+  text-align: center;
 }
