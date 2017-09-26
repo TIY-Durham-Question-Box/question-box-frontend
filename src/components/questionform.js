@@ -21,7 +21,7 @@ export default class QuestionForm extends Component {
     //Question to post:
     console.log(event.target.question.value);
     //Tags to post:
-    console.log(event.tags.email.value);
+    console.log(event.target.tags.value);
   }
   handleTextChange(event){
     event.preventDefault();
