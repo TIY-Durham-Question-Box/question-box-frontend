@@ -5,6 +5,14 @@
   color: ivory;
   text-align: center;
   margin: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.header-component > h1 > img{
+  margin-top: 4px;
+  height: 32px;
+  width: 32px;
 }
 .header-input-field{
   display: grid;
