@@ -29,25 +29,23 @@ export default class QuestionForm extends Component {
   }
   render() {
     return (
-      <div>
-        <div className="questionform-component" >
-          <form className="question-form-container" onSubmit={this.register}>
-          <h2>Question Form</h2>
-            <label htmlFor="title">Title:</label>
-            <input onChange={this.handleTextChange} type="text" id="title"
-            placeholder="Title" name="title" value={this.state.title}/><br/>
+      <div className="questionform-component" >
+        <form className="question-form-container" onSubmit={this.register}>
+        <h2>Question Form</h2>
+          <label htmlFor="title">Title:</label>
+          <input onChange={this.handleTextChange} type="text" id="title"
+          placeholder="Title" name="title" value={this.state.title}/><br/>
 
-            <label htmlFor="question">Question:</label>
-            <textarea onChange={this.handleTextChange} type="text" id="question"
-            placeholder="Type your question here" name="question" value={this.state.question}/><br/>
+          <label htmlFor="question">Question:</label>
+          <textarea onChange={this.handleTextChange} type="text" id="question"
+          placeholder="Type your question here" name="question" value={this.state.question}/><br/>
 
-            <label htmlFor="tags">Re-Enter Password:</label>
-            <input onChange={this.handleTextChange} type="text" id="tags"
-            placeholder="tags" name="tags" value={this.state.secondpassword}/><br/>
+          <label htmlFor="tags">Re-Enter Password:</label>
+          <input onChange={this.handleTextChange} type="text" id="tags"
+          placeholder="tags" name="tags" value={this.state.secondpassword}/><br/>
 
-            <button className="question-form-submit" type="submit">Submit question</button>
-          </form>
-        </div>
+          <button className="question-form-submit" type="submit">Submit question</button>
+        </form>
       </div>
     )
   }

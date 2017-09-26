@@ -4,10 +4,8 @@ import '../styles/App.css';
 export default class QuestionPage extends Component {
   render() {
     return (
-      <div>
-        <div className="questionpage-component" >
+      <div className="questionpage-component" >
         <h1>Question Page</h1>
-        </div>
       </div>
     )
   }
