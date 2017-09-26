@@ -11,17 +11,17 @@ export default class QuestionForm extends Component {
       email: ""
     }
     this.handleTextChange = this.handleTextChange.bind(this);
-    this.register = this.register.bind(this);
+    this.submitquestion = this.submitquestion.bind(this);
   }
-  register(event){
+  submitquestion(event){
     event.preventDefault();
     console.log("register fired");
-    //Username to post:
-    console.log(event.target.username.value);
-    //Password to post:
-    console.log(event.target.secondpassword.value);
-    //Email to post:
-    console.log(event.target.email.value);
+    //Title to post:
+    console.log(event.target.title.value);
+    //Question to post:
+    console.log(event.target.question.value);
+    //Tags to post:
+    console.log(event.target.tags.value);
   }
   handleTextChange(event){
     event.preventDefault();
@@ -30,7 +30,7 @@ export default class QuestionForm extends Component {
   render() {
     return (
       <div className="questionform-component" >
-        <form className="question-form-container" onSubmit={this.register}>
+        <form className="question-form-container" onSubmit={this.submitquestion}>
         <h2>Question Form</h2>
           <label htmlFor="title">Title:</label>
           <input onChange={this.handleTextChange} type="text" id="title"

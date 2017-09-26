@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/header-styles.css';
 import '../styles/App.css';
 import HeaderGreeting from './header-components/header-greeting.js';
