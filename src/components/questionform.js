@@ -15,7 +15,7 @@ export default class QuestionForm extends Component {
   }
   submitquestion(event){
     event.preventDefault();
-    console.log("register fired");
+    console.log("Question Submisson fired");
     //Title to post:
     console.log(event.target.title.value);
     //Question to post:
