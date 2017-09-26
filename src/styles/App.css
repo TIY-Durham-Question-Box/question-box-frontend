@@ -27,11 +27,17 @@ body{
 
 
 
-/*LOGIN AND REGISTRATION STYLES*/
+/*LOGIN AND REGISTRATION AND QUESTION STYLES*/
 
-.loginregistrationpage-component{
+.loginregistrationpage-component, .questionform-component{
   text-align: center;
   margin: 30px 0;
+}
+.loginregister-form-container input, .question-form-container input{
+  text-align: center;
+  margin: 10px 0;
+  display: inline;
+  font-size: 15px;
 }
 .login-register-switch-button{
   width: 50%;
@@ -44,12 +50,6 @@ body{
 .login-register-switch-button:active{
   color: #0000FF;
 }
-.loginregister-form-container input{
-  text-align: center;
-  margin: 10px 0;
-  display: inline;
-  font-size: 15px;
-}
 .loginregister-submit-button{
   font-size: 15px;
   padding: 10px;
@@ -60,7 +60,37 @@ body{
   display: flex;
   justify-content: space-around;
 }
+.questionform-textarea{
+  font-size: 15px;
+}
 @media (min-width: 600px){
+  .question-form-container{
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .question-form-container h2{
+    text-align: center;
+  }
+  .question-form-container label{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+  }
+  .question-form-container #question{
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    height: 100px;
+  }
+  .question-form-container #title{
+    text-align: left;
+    width: 50%;
+  }
+  .question-form-container button{
+    height: 50px;
+    font-size: 15px;
+  }
   .login-register-holder{
     border: 1px solid black;
     width: 350px;
@@ -90,18 +120,21 @@ body{
     margin: 5px 0;
     font-size: 20px;
   }
-  .loginregister-form-container{
+  .loginregister-form-container, .question-form-container{
     border: 0;
     display: flex;
     flex-direction: column;
     margin: 0 20px;
     font-size: 20px;
   }
-  .loginregister-submit-button{
+  .loginregister-submit-button, .question-form-submit-button{
     font-size: 20px;
     padding: 10px 0;
     width: 50%;
     margin: 20px auto 0 auto;
+  }
+  .questionform-textarea{
+    height: 50px;
   }
 }
 

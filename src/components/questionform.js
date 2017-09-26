@@ -31,20 +31,20 @@ export default class QuestionForm extends Component {
     return (
       <div className="questionform-component" >
         <form className="question-form-container" onSubmit={this.submitquestion}>
-        <h2>Question Form</h2>
+        <h2>Ask a Question!</h2>
           <label htmlFor="title">Title:</label>
           <input onChange={this.handleTextChange} type="text" id="title"
-          placeholder="Title" name="title" value={this.state.title}/><br/>
+          placeholder="Title" name="title" value={this.state.title} required/><br/>
 
           <label htmlFor="question">Question:</label>
-          <textarea onChange={this.handleTextChange} type="text" id="question"
-          placeholder="Type your question here" name="question" value={this.state.question}/><br/>
+          <textarea onChange={this.handleTextChange} type="text" id="question" className="questionform-textarea"
+          placeholder="Type your question here" name="question" value={this.state.question} required/><br/>
 
-          <label htmlFor="tags">Re-Enter Password:</label>
+          <label htmlFor="tags">Tags:</label>
           <input onChange={this.handleTextChange} type="text" id="tags"
           placeholder="tags" name="tags" value={this.state.secondpassword}/><br/>
 
-          <button className="question-form-submit" type="submit">Submit question</button>
+          <button className="question-form-submit-button" type="submit">Submit question</button>
         </form>
       </div>
     )
