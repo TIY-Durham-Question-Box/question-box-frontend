@@ -26,9 +26,9 @@ export default class Header extends Component {
 
     return(
       <div className="header-component" >
-        <h1>
-          <img src={logo} alt="Logo" />
-          <div>Question Box</div>
+        <h1 className="header-top-logo">
+          <img onClick={this.props.reroute} src={logo} alt="Logo" />
+          <div onClick={this.props.reroute}>Question Box</div>
         </h1>
         <div className="header-input-field">
           <HeaderSearch />
