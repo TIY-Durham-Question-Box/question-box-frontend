@@ -7,16 +7,6 @@ export default class QuestionPage extends Component {
   constructor(){
     super();
 
-<<<<<<< HEAD
-=======
-    this.setTitle = this.setTitle.bind(this);
-    this.setLanguage = this.setLanguage.bind(this);
-    this.setTags = this.setTags.bind(this);
-    this.setQuestion = this.setQuestion.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.setAnswer = this.setAnswer.bind(this);
-
->>>>>>> production
     this.state = {
       username: 'TilboTaggins',
       questionAuthor: 'TilboTaggins',
@@ -39,25 +29,6 @@ export default class QuestionPage extends Component {
       ]
     }
   }
-<<<<<<< HEAD
-=======
-
-  setTitle = (e) => {
-    this.setState({title:e.target.value});
-  }
-  setLanguage = (e) => {
-    this.setState({language:e.target.value});
-  }
-  setTags = (e) => {
-    this.setTags({tags:e.target.value});
-  }
-  setQuestion = (e) => {
-    this.setState({question:e.target.value});
-  }
-  setAnswer = (e) => {
-    this.setState({answer:e.target.value});
-  }
->>>>>>> production
   handleSubmit = (e) => {
     e.prevendDefault();
     console.log(this.state);
