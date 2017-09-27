@@ -1,5 +1,9 @@
 .header-component{
-  background-color: deepskyblue;
+  background-image: url(skybackground.gif);
+  background-size: cover;
+  top: 0;
+  position: fixed;
+  width: 100%;
 }
 .header-component > h1{
   color: ivory;
@@ -17,7 +21,6 @@
 .header-input-field{
   display: grid;
   grid-template-columns: 70% 30%;
-  background-color: deepskyblue;
   height: 38px;
   padding: 2px;
 }

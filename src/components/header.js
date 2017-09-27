@@ -12,6 +12,7 @@ import logo from './header-components/logo.png';
 export default class Header extends Component {
   render() {
     let loggedInOrOut = null;
+    //LOGIN LOGOUT SHOULD BE A PIPE
     if ("test"==="test"){
       loggedInOrOut =
         <div className="logged-in">
