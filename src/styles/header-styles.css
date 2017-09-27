@@ -52,6 +52,7 @@
 .header-search-form{
   border-radius: 8px;
   height: 38px;
+  max-width: 600px;
 }
 .header-search-input{
   border-top-left-radius: 8px;

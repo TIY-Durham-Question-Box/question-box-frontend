@@ -7,13 +7,6 @@ export default class QuestionPage extends Component {
   constructor(){
     super();
 
-    this.setTitle = this.setTitle.bind(this);
-    this.setLanguage = this.setLanguage.bind(this);
-    this.setTags = this.setTags.bind(this);
-    this.setQuestion = this.setQuestion.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.setAnswer = this.setAnswer.bind(this);
-
     this.state = {
       username: 'TilboTaggins',
       questionAuthor: 'TilboTaggins',
@@ -36,28 +29,16 @@ export default class QuestionPage extends Component {
       ]
     }
   }
-
-  setTitle = (e) => {
-    this.setState({title:e.target.value});
-  }
-  setLanguage = (e) => {
-    this.setState({language:e.target.value});
-  }
-  setTags = (e) => {
-    this.setTags({tags:e.target.value});
-  }
-  setQuestion = (e) => {
-    this.setState({question:e.target.value});
-  }
-  setAnswer = (e) => {
-    this.setState({answer:e.target.value});
-  }
   handleSubmit = (e) => {
     e.prevendDefault();
     console.log(this.state);
   }
-
-
+  handleTextChange = (event) => {
+    event.preventDefault();
+    if (this.state[event.target.id] !== undefined){
+      this.setState({[event.target.id]: event.target.value});
+    }
+  }
   render() {
     let allAnswers = this.state.history;
     let answers = allAnswers.map((answers)=>{
@@ -79,19 +60,19 @@ export default class QuestionPage extends Component {
             <h1>Question Page</h1>
             <p>
               Title:
-              <input type="text" onChange={this.setTitle} value={this.state.title} readOnly={locked} />
+              <input type="text" id="title" onChange={this.handleTextChange} value={this.state.title} readOnly={locked} />
             </p>
             <p>
               Language:
-              <input type="text" onChange={this.setLanguage} value={this.state.language} readOnly={locked} />
+              <input type="text" id="language" onChange={this.handleTextChange} value={this.state.language} readOnly={locked} />
             </p>
             <p>
               Tags:
-              <input type="text" onChange={this.setTags} value={this.state.tags} readOnly={locked} />
+              <input type="text" id="tags" onChange={this.handleTextChange} value={this.state.tags} readOnly={locked} />
             </p>
             <p className="active-question-textarea">
               Question:
-              <textarea onChange={this.setQuestion} value={this.state.question} readOnly={locked} />
+              <textarea onChange={this.handleTextChange} id="question" value={this.state.question} readOnly={locked} />
             </p>
               {editButton}
             </form>

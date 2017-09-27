@@ -8,7 +8,6 @@ export default class Login extends Component {
       username : "",
       password: ""
     }
-    this.handleTextChange = this.handleTextChange.bind(this);
     this.login = this.login.bind(this);
   }
   login(event){
@@ -18,9 +17,11 @@ export default class Login extends Component {
     //Password to post:
     console.log(event.target.password.value);
   }
-  handleTextChange(event){
+  handleTextChange = (event) => {
     event.preventDefault();
-    this.setState({[event.target.id]: event.target.value});
+    if (this.state[event.target.id] !== undefined){
+      this.setState({[event.target.id]: event.target.value});
+    }
   }
   render() {
     return (

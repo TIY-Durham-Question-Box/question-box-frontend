@@ -8,9 +8,9 @@ export default class QuestionForm extends Component {
       title : "",
       question: "",
       tags: "",
-      username: ""
+      username: "",
+      language: ""
     }
-    this.handleTextChange = this.handleTextChange.bind(this);
     this.submitquestion = this.submitquestion.bind(this);
   }
   submitquestion(event){
@@ -18,14 +18,18 @@ export default class QuestionForm extends Component {
     console.log("Question Submisson fired");
     //Title to post:
     console.log(event.target.title.value);
+    //Language to post:
+    console.log(event.target.language.value);
     //Question to post:
     console.log(event.target.question.value);
     //Tags to post:
     console.log(event.target.tags.value);
   }
-  handleTextChange(event){
+  handleTextChange = (event) => {
     event.preventDefault();
-    this.setState({[event.target.id]: event.target.value});
+    if (this.state[event.target.id] !== undefined){
+      this.setState({[event.target.id]: event.target.value});
+    }
   }
   render() {
     return (
@@ -35,6 +39,10 @@ export default class QuestionForm extends Component {
           <label htmlFor="title">Title:</label>
           <input onChange={this.handleTextChange} type="text" id="title"
           placeholder="Title" name="title" value={this.state.title} required/><br/>
+
+          <label htmlFor="language">Language:</label>
+          <input onChange={this.handleTextChange} type="text" id="language"
+          placeholder="Language" name="language" value={this.state.language} required/><br/>
 
           <label htmlFor="question">Question:</label>
           <textarea onChange={this.handleTextChange} type="text" id="question" className="questionform-textarea"
