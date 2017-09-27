@@ -10,18 +10,7 @@ import '../styles/App.css';
 
 
 export default class App extends Component {
-  fetchData = () => {
-    var fetchConfig = { method: 'GET',
-                  mode: 'cors',
-                  cache: 'default' };
-    fetch(`https://secure-beyond-80954.herokuapp.com/questions`, fetchConfig).then(results => {
-        return results.json();
-      }).then(data => {
-        console.log(data);
-    })
-  }
   render() {
-    this.fetchData();
     return (
       <div>
         <BrowserRouter>
