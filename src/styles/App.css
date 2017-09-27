@@ -142,7 +142,7 @@ body{
     width: 350px;
     margin: 0 auto;
   }
-  #styling-for-active-button{
+  .login-register-switches #styling-for-active-button{
     border-bottom: 1px solid white;
   }
 }

@@ -28,16 +28,20 @@ export default class QuestionForm extends Component {
   }
   handleTextChange = (event) => {
     event.preventDefault();
+    //MAKE IT SO THAT PEOPLE CANNOT ADD THE SAME TAG TWICE
     if (this.state[event.target.id] !== undefined){
       if (event.target.id === "tagsinput"){
         if (/^[0-9a-zA-Z,-]*$/.test(event.target.value[event.target.value.length-1])) {
           this.setState({tagsinput: event.target.value});
-        } else if (/^[ ]*$/.test(event.target.value[event.target.value.length-1])){
-          console.log(event.target.value);
-          this.setState(prevState => ({
-              tags: [...prevState.tags, this.state.tagsinput],
-              tagsinput: ""
-            }))
+        } else if (/^[ ]*$/.test(event.target.value[event.target.value.length-1]) && event.target.value !== " "){
+          if (this.state.tags.indexOf(event.target.value.slice(0, -1)) !== -1){
+            console.log("no stop");
+          } else {
+            this.setState(prevState => ({
+                tags: [...prevState.tags, this.state.tagsinput],
+                tagsinput: ""
+              }))
+          }
         }
         return
       } else if (event.target.id !== "tagsinput"){
@@ -45,13 +49,17 @@ export default class QuestionForm extends Component {
       }
     }
   }
+  removetag = (event) => {
+    event.preventDefault();
+    this.state.tags.splice(this.state.tags.indexOf(event.target.id), 1);
+    this.forceUpdate();
+  }
   render() {
-    console.log(this.state.tags);
     let tags = this.state.tags.map((x, i) => {
       return(
         <div key={x+i} className="ask-question-tag-input">
           <span className="question-tag-span">{x}</span>
-          <span className="question-x-box">X</span>
+          <span className="question-x-box" id={x} onClick={this.removetag}>X</span>
         </div>
       )
     })
