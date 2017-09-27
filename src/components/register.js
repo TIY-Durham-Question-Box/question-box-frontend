@@ -10,7 +10,6 @@ export default class Register extends Component {
       secondpassword: "",
       email: ""
     }
-    this.handleTextChange = this.handleTextChange.bind(this);
     this.register = this.register.bind(this);
   }
   register(event){
@@ -23,9 +22,11 @@ export default class Register extends Component {
     //Email to post:
     console.log(event.target.email.value);
   }
-  handleTextChange(event){
+  handleTextChange = (event) => {
     event.preventDefault();
-    this.setState({[event.target.id]: event.target.value});
+    if (this.state[event.target.id] !== undefined){
+      this.setState({[event.target.id]: event.target.value});
+    }
   }
   render() {
     return (

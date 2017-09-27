@@ -18,7 +18,9 @@ export default class HeaderSearch extends Component {
   }
   handleTextChange = (event) => {
     event.preventDefault();
-    this.setState({[event.target.id]: event.target.value , fireRedirect: false});
+    if (this.state[event.target.id] !== undefined){
+      this.setState({[event.target.id]: event.target.value , fireRedirect: false});
+    }
   }
   render() {
     return(

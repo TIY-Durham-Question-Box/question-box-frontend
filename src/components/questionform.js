@@ -10,7 +10,6 @@ export default class QuestionForm extends Component {
       tags: "",
       username: ""
     }
-    this.handleTextChange = this.handleTextChange.bind(this);
     this.submitquestion = this.submitquestion.bind(this);
   }
   submitquestion(event){
@@ -23,9 +22,11 @@ export default class QuestionForm extends Component {
     //Tags to post:
     console.log(event.target.tags.value);
   }
-  handleTextChange(event){
+  handleTextChange = (event) => {
     event.preventDefault();
-    this.setState({[event.target.id]: event.target.value});
+    if (this.state[event.target.id] !== undefined){
+      this.setState({[event.target.id]: event.target.value});
+    }
   }
   render() {
     return (
