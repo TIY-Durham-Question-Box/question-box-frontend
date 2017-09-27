@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/question-page.css';
 import Answers from './questionpage-components/answers.js';
 
+
 export default class QuestionPage extends Component {
   constructor(){
     super();
@@ -11,9 +12,12 @@ export default class QuestionPage extends Component {
     this.setTags = this.setTags.bind(this);
     this.setQuestion = this.setQuestion.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.setAnswer = this.setAnswer.bind(this);
 
     this.state = {
+      username: '',
       questionId: 1,
+      answer: "This is my answer, it's not a great answer.  Infact it's not even a good answer.  It doesn't answer anything.  I feel so bad for even writing it. <img src='feelsBadMan.png' />",
       title: "Question of Randos",
       language: "JavaScript",
       tags: 'Question, Random',
@@ -43,6 +47,9 @@ export default class QuestionPage extends Component {
   }
   setQuestion = (e) => {
     this.setState({question:e.target.value});
+  }
+  setAnswer = (e) => {
+    this.setState({answer:e.target.value});
   }
   handleSubmit = (e) => {
     e.prevendDefault();
@@ -87,6 +94,13 @@ export default class QuestionPage extends Component {
               {editButton}
             </form>
               {answers}
+            <div className="answer-area">
+              <form onSubmit={this.handleSubmit}>
+                <div>Your Answer</div>
+                <textarea onChange={this.setAnswer} value={this.state.answer}/>
+                <input type="Submit" value="Submit"/>
+              </form>
+            </div>
           </div>
       </div>
     )
