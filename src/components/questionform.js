@@ -49,7 +49,7 @@ export default class QuestionForm extends Component {
     console.log(this.state.tags);
     let tags = this.state.tags.map((x, i) => {
       return(
-        <div key={x+i}>
+        <div key={x+i} className="ask-question-tag-input">
           {x}
         </div>
       )

@@ -77,6 +77,15 @@ body{
 .questionform-textarea{
   font-size: 15px;
 }
+.ask-question-tag-input{
+  display: inline;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 5px;
+}
+.question-form-submit-button{
+  display: block;
+}
 @media (min-width: 600px){
   .question-form-container{
     width: 60%;
@@ -101,8 +110,10 @@ body{
     text-align: left;
     width: 50%;
   }
-  .question-form-container button{
+  .question-form-submit-button{
+    display: block;
     height: 50px;
+    margin: 10px 0;
     font-size: 15px;
   }
   .login-register-holder{
@@ -145,7 +156,7 @@ body{
     font-size: 20px;
     padding: 10px 0;
     width: 50%;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 10px auto;
   }
   .questionform-textarea{
     height: 50px;
