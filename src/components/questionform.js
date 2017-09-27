@@ -17,21 +17,44 @@ export default class QuestionForm extends Component {
   }
   submitquestion(event){
     event.preventDefault();
-    console.log("Question Submisson fired");
+    if(event.target.title.value.length < 3){
+      this.setState({tagerror: "You Need a longer Title"});
+      return
+    } else if(event.target.language.value.length < 2){
+      this.setState({tagerror: "Is that really a language?"});
+      return
+    } else if(event.target.question.value.length < 10){
+      this.setState({tagerror: "You should be more descriptive in your question"});
+      return
+    } else {
+      var newquestiondata = {
+        title: this.state.title,
+        language: this.state.language,
+        body: this.state.question,
+      }
+      console.log(newquestiondata);
+      console.log(JSON.stringify(newquestiondata));
+      console.log("Question Submisson fired");
+      // var fetchConfig = { method: 'POST',
+      //               mode: 'cors',
+      //               body: JSON.stringify(newquestiondata),
+      //               cache: 'default' };
+      // fetch(`https://secure-beyond-80954.herokuapp.com/questions`, fetchConfig)
+      // .then(function(res){ console.log(res); })
+      // .then(function(data){ console.log(data)  })
+    }
     //Title to post:
-    console.log(event.target.title.value);
+    // console.log(event.target.title.value);
     //Language to post:
-    console.log(event.target.language.value);
+    // console.log(event.target.language.value);
     //Question to post:
-    console.log(event.target.question.value);
+    // console.log(event.target.question.value);
     //Tags to post:
-    console.log(event.target.tags.value);
+    // console.log(this.state.tags);
   }
   handleTextChange = (event) => {
-
     event.preventDefault();
     this.setState({tagerror: false});
-    //MAKE IT SO THAT PEOPLE CANNOT ADD THE SAME TAG TWICE
     if (this.state[event.target.id] !== undefined){
       if (event.target.id === "tagsinput"){
         if (/^[0-9a-zA-Z,-]*$/.test(event.target.value[event.target.value.length-1])) {
@@ -87,7 +110,9 @@ export default class QuestionForm extends Component {
             <label htmlFor="tags">Tags:</label>
             <input pattern="^[0-9a-zA-Z,-]*$" onChange={this.handleTextChange} type="text" id="tagsinput"
             placeholder="tags" name="tagsinput" value={this.state.tagsinput}/><br/>
-            {this.state.tagerror ? (<p>{this.state.tagerror}</p>) : ("")}
+            <br/>
+            {this.state.tagerror? (<p className="errormessage">{this.state.tagerror}</p>) : ""}
+            <br/>
             <div>
               {tags}
             </div>

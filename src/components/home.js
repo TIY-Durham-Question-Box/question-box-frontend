@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import request from 'superagent';
 
 export default class Home extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
     this.state = {
       testdata: false
@@ -15,14 +15,11 @@ export default class Home extends Component {
     request
       .get('https://secure-beyond-80954.herokuapp.com/questions')
       .end((err,res) => {
-        console.log(err);
-        console.log(typeof JSON.parse(res.text));
         this.setState({testdata: JSON.parse(res.text)});
       })
 
   }
   render() {
-    // console.log(this.state.testdata);
     let allQuestions = this.state.testdata;
     let questionLink;
     console.log(allQuestions);
