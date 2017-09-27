@@ -10,6 +10,7 @@ export default class QuestionForm extends Component {
       tagsinput: "",
       username: "",
       language: "",
+      tagerror: false,
       tags: []
     }
     this.submitquestion = this.submitquestion.bind(this);
@@ -27,7 +28,9 @@ export default class QuestionForm extends Component {
     console.log(event.target.tags.value);
   }
   handleTextChange = (event) => {
+
     event.preventDefault();
+    this.setState({tagerror: false});
     //MAKE IT SO THAT PEOPLE CANNOT ADD THE SAME TAG TWICE
     if (this.state[event.target.id] !== undefined){
       if (event.target.id === "tagsinput"){
@@ -36,7 +39,7 @@ export default class QuestionForm extends Component {
         } else if (/^[ ]*$/.test(event.target.value[event.target.value.length-1]) && event.target.value !== " "){
           var valuetocheck = event.target.value.toLowerCase();
           if (this.state.tags.indexOf(valuetocheck.slice(0, -1)) !== -1){
-            console.log("no stop");
+            this.setState({tagerror: "You already have that tag!"});
           } else {
             this.setState(prevState => ({
                 tags: [...prevState.tags, this.state.tagsinput.toLowerCase()],
@@ -84,6 +87,7 @@ export default class QuestionForm extends Component {
             <label htmlFor="tags">Tags:</label>
             <input pattern="^[0-9a-zA-Z,-]*$" onChange={this.handleTextChange} type="text" id="tagsinput"
             placeholder="tags" name="tagsinput" value={this.state.tagsinput}/><br/>
+            {this.state.tagerror ? (<p>{this.state.tagerror}</p>) : ("")}
             <div>
               {tags}
             </div>
