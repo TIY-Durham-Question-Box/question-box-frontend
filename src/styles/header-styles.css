@@ -23,6 +23,7 @@
   grid-template-columns: 70% 30%;
   height: 38px;
   padding: 2px;
+  padding-right: 0;
 }
 .header-search-button{
   background-color: grey;
@@ -58,15 +59,20 @@
   font-size: 15px;
 }
 .header-log-button{
+  background-image: url(a_green_cartoon_pipe.png);
+  /*background-size: cover;*/
+  background-size: 150% 45px;
+  background-position: left center;
+  overflow: visible;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: orange;
+  background-repeat: no-repeat;
+  /*background-color: orange;*/
   height: 36px;
   width: 96%;
   color: black;
-  border: 1px solid grey;
-  border-radius: 8px;
   text-align: center;
   cursor: pointer;
+  z-index: 999;
 }
