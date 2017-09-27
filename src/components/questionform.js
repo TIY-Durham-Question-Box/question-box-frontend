@@ -17,8 +17,14 @@ export default class QuestionForm extends Component {
   }
   submitquestion(event){
     event.preventDefault();
-    if(event.target.title.value.length < 3 || event.target.language.value.length < 2 || event.target.question.value.length < 5){
-      this.setState({tagerror: "You Need a longer descripton"});
+    if(event.target.title.value.length < 3){
+      this.setState({tagerror: "You Need a longer Title"});
+      return
+    } else if(event.target.language.value.length < 2){
+      this.setState({tagerror: "Is that really a language?"});
+      return
+    } else if(event.target.question.value.length < 10){
+      this.setState({tagerror: "You should be more descriptive in your question"});
       return
     } else {
       var newquestiondata = {
@@ -104,7 +110,9 @@ export default class QuestionForm extends Component {
             <label htmlFor="tags">Tags:</label>
             <input pattern="^[0-9a-zA-Z,-]*$" onChange={this.handleTextChange} type="text" id="tagsinput"
             placeholder="tags" name="tagsinput" value={this.state.tagsinput}/><br/>
-            {this.state.tagerror ? (<p>{this.state.tagerror}</p>) : ("")}
+            <br/>
+            {this.state.tagerror? (<p className="errormessage">{this.state.tagerror}</p>) : ""}
+            <br/>
             <div>
               {tags}
             </div>
