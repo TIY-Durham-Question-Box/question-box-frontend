@@ -14,7 +14,7 @@ export default class App extends Component {
     return (
       <div>
         <BrowserRouter>
-          <div>
+          <div className="second">
             <nav>
               <Header/>
             </nav>
