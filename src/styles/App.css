@@ -79,9 +79,16 @@ body{
 }
 .ask-question-tag-input{
   display: inline;
-  padding: 5px;
   border: 1px solid black;
   margin: 5px;
+}
+.question-tag-span{
+  padding: 5px;
+}
+.question-x-box{
+  border-left: 1px solid black;
+  padding: 0 5px;
+  color: red
 }
 .question-form-submit-button{
   display: block;

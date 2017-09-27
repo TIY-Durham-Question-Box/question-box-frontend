@@ -50,7 +50,8 @@ export default class QuestionForm extends Component {
     let tags = this.state.tags.map((x, i) => {
       return(
         <div key={x+i} className="ask-question-tag-input">
-          {x}
+          <span className="question-tag-span">{x}</span>
+          <span className="question-x-box">X</span>
         </div>
       )
     })
@@ -74,7 +75,9 @@ export default class QuestionForm extends Component {
             <label htmlFor="tags">Tags:</label>
             <input pattern="^[0-9a-zA-Z,-]*$" onChange={this.handleTextChange} type="text" id="tagsinput"
             placeholder="tags" name="tagsinput" value={this.state.tagsinput}/><br/>
-            {tags}
+            <div>
+              {tags}
+            </div>
             <button className="question-form-submit-button" type="submit">Submit question</button>
           </form>
         </div>
