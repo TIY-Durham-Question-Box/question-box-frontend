@@ -17,15 +17,15 @@ export default class QuestionPage extends Component {
       tags: 'Question, Random',
       question: "This is just some place holder text for the question.  This question is about JavaScript, specifically, it's about ECMAscript.  You know, cuz it's kinda cool to talk about random synonyms.",
       history: [
-        {
-          answerId: 1,
-          user: "Ted",
-          answer: "Rambo was master of randos.  Rhonda Rousey was cool for a time, too."
-        },{
-          answerId: 2,
-          user: "Jimbo",
-          answer: "Jimbo was master of jingos.  Meisha Tate was cooler."
-        }
+        // {
+        //   answerId: 1,
+        //   user: "Ted",
+        //   answer: "Rambo was master of randos.  Rhonda Rousey was cool for a time, too."
+        // },{
+        //   answerId: 2,
+        //   user: "Jimbo",
+        //   answer: "Jimbo was master of jingos.  Meisha Tate was cooler."
+        // }
       ]
     }
   }
