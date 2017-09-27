@@ -17,6 +17,10 @@ export default class QuestionForm extends Component {
   }
   submitquestion(event){
     event.preventDefault();
+    if(event.target.title.value.length < 3 || event.target.language.value.length < 2 || event.target.question.value.length < 5){
+      this.setState({tagerror: "You Need a longer descripton"});
+      return
+    }
     console.log("Question Submisson fired");
     //Title to post:
     console.log(event.target.title.value);
@@ -25,13 +29,12 @@ export default class QuestionForm extends Component {
     //Question to post:
     console.log(event.target.question.value);
     //Tags to post:
-    console.log(event.target.tags.value);
+    console.log(this.state.tags);
+    //NEED TO REDIRECT TO POST
   }
   handleTextChange = (event) => {
-
     event.preventDefault();
     this.setState({tagerror: false});
-    //MAKE IT SO THAT PEOPLE CANNOT ADD THE SAME TAG TWICE
     if (this.state[event.target.id] !== undefined){
       if (event.target.id === "tagsinput"){
         if (/^[0-9a-zA-Z,-]*$/.test(event.target.value[event.target.value.length-1])) {
