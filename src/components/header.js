@@ -7,8 +7,18 @@ import logo from './header-components/logo.png';
 
 
 export default class Header extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      fireRedirect: false
+    }
+  }
+  redirect = (event) => {
+    event.preventDefault();
+      this.setState({ fireRedirect: true })
+  }
   render() {
-    let testloginvar = true;
+    let testloginvar = false;
     let loggedInOrOut = null;
     //LOGIN LOGOUT SHOULD BE A PIPE
     if (testloginvar){
@@ -25,9 +35,11 @@ export default class Header extends Component {
     } else {
       loggedInOrOut =
       <div className="logged-out">
-        <div className="header-log-button" >
-          Login or Register
-        </div>
+        <Link className="header-log-button" to="/login">
+          <div>
+            Login or Register
+          </div>
+        </Link>
       </div>
     }
 
