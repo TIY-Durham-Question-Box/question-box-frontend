@@ -17,11 +17,14 @@ export default class QuestionForm extends Component {
   }
   submitquestion(event){
     event.preventDefault();
-    if(event.target.title.value.length < 3 || event.target.language.value.length < 2 || event.target.question.value.length < 5){
+    if(event.target.title.value.length < 3){
       this.setState({tagerror: "You Need a longer Title"});
       return
-    } else if(event.target.title.value.length < 3 || event.target.language.value.length < 2 || event.target.question.value.length < 5){
-      this.setState({tagerror: "You Need a longer descripton"});
+    } else if(event.target.language.value.length < 2){
+      this.setState({tagerror: "Is that really a language?"});
+      return
+    } else if(event.target.question.value.length < 10){
+      this.setState({tagerror: "You should be more descriptive in your question"});
       return
     } else {
       var newquestiondata = {
