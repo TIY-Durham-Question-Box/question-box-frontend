@@ -7,7 +7,7 @@ export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      testdata: []
+      testdata: false
     };
 
   }
@@ -16,17 +16,27 @@ export default class Home extends Component {
       .get('https://secure-beyond-80954.herokuapp.com/questions')
       .end((err,res) => {
         console.log(err);
-        console.log(res.text);
-        this.setState({testdata: res.text});
+        console.log(typeof JSON.parse(res.text));
+        this.setState({testdata: JSON.parse(res.text)});
       })
 
   }
   render() {
     // console.log(this.state.testdata);
     let allQuestions = this.state.testdata;
-    let questionLink = allQuestions.map((questionLink) =>{
-      return(<button className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>)
-    });
+    let questionLink;
+    console.log(allQuestions);
+    if(allQuestions){
+      questionLink = allQuestions.questions.map((questionLink) =>{
+        return(<button key={questionLink.id} className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>)
+      })
+    } else {
+      questionLink = () => {
+        return(<p>questionLink is missing</p>);
+      }
+    };
+
+
 
 
     return (

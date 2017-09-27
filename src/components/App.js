@@ -7,7 +7,6 @@ import Header from './header.js';
 import Footer from './footer.js';
 import React, { Component } from 'react';
 import cookie from 'react-cookies';
-import request from 'superagent'
 import '../styles/App.css';
 
 
