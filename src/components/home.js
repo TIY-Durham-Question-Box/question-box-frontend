@@ -29,53 +29,6 @@ export default class Home extends Component {
             </div>
             <div className="recently-asked-questions-homepage">
               <h3>Recently Asked Questions:</h3>
-                <h3>Recently Asked Questions:</h3>
-                  <h3>Recently Asked Questions:</h3>
-                    <h3>Recently Asked Questions:</h3>
-                      <h3>Recently Asked Questions:</h3>
-                        <h3>Recently Asked Questions:</h3>
-                          <h3>Recently Asked Questions:</h3>
-                            <h3>Recently Asked Questions:</h3>
-                              <h3>Recently Asked Questions:</h3>
-                                <h3>Recently Asked Questions:</h3>
-                                  <h3>Recently Asked Questions:</h3>
-                                    <h3>Recently Asked Questions:</h3>
-                                      <h3>Recently Asked Questions:</h3>
-                                        <h3>Recently Asked Questions:</h3>
-                                          <h3>Recently Asked Questions:</h3>
-                                            <h3>Recently Asked Questions:</h3>
-                                              <h3>Recently Asked Questions:</h3>
-                                                <h3>Recently Asked Questions:</h3>
-                                                  <h3>Recently Asked Questions:</h3>
-                                                    <h3>Recently Asked Questions:</h3>
-                                                      <h3>Recently Asked Questions:</h3>
-                                                        <h3>Recently Asked Questions:</h3>
-                                                          <h3>Recently Asked Questions:</h3>
-                                                            <h3>Recently Asked Questions:</h3>
-                                                              <h3>Recently Asked Questions:</h3>
-                                                                <h3>Recently Asked Questions:</h3>
-                                                                  <h3>Recently Asked Questions:</h3>
-                                                                    <h3>Recently Asked Questions:</h3>
-                                                                      <h3>Recently Asked Questions:</h3>
-                                                                        <h3>Recently Asked Questions:</h3>
-                                                                          <h3>Recently Asked Questions:</h3>
-                                                                            <h3>Recently Asked Questions:</h3>
-                                                                              <h3>Recently Asked Questions:</h3>
-                                                                                <h3>Recently Asked Questions:</h3>
-                                                                                  <h3>Recently Asked Questions:</h3>
-                                                                                    <h3>Recently Asked Questions:</h3>
-                                                                                      <h3>Recently Asked Questions:</h3>
-                                                                                        <h3>Recently Asked Questions:</h3>
-                                                                                          <h3>Recently Asked Questions:</h3>
-                                                                                            <h3>Recently Asked Questions:</h3>
-                                                                                              <h3>Recently Asked Questions:</h3>
-                                                                                                <h3>Recently Asked Questions:</h3>
-                                                                                                  <h3>Recently Asked Questions:</h3>
-                                                                                                    <h3>Recently Asked Questions:</h3>
-                                                                                                      <h3>Recently Asked Questions:</h3>
-                                                                                                        <h3>Recently Asked Questions:</h3>
-                                                                                                          <h3>Recently Asked Questions:</h3>
-                                                                                                            <h3>Recently Asked Questions:</h3>
               <button className="homepage-ask-a-question-button"><Link to="/addquestion">Ask a Question!</Link></button>
               <button className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>
             </div>
