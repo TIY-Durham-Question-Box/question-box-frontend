@@ -18,6 +18,14 @@ body{
     /*border: 1px solid black;*/
   }
 }
+@keyframes errorcolorchange {
+    from {color: red;}
+    to {color: black;}
+}
+
+.errormessage{
+  animation: errorcolorchange 2s 1;
+}
 /*HOMEPAGE STYLES*/
 
 .homepage-welcome-header{
