@@ -3,27 +3,30 @@ import { Link } from 'react-router-dom';
 import '../styles/header-styles.css';
 import '../styles/App.css';
 import HeaderGreeting from './header-components/header-greeting.js';
-import HeaderLogin from './header-components/registration-login.js';
-import HeaderLogout from './header-components/logout-button.js';
 import HeaderSearch from './header-components/search-bar.js';
 import logo from './header-components/logo.png';
 
 
 export default class Header extends Component {
   render() {
+    let testloginvar = true;
     let loggedInOrOut = null;
     //LOGIN LOGOUT SHOULD BE A PIPE
-    if ("test"==="test"){
+    if (testloginvar){
       loggedInOrOut =
         <div className="logged-in">
+          <div className="header-log-button" >
+            Log Out
+          </div>
           <HeaderGreeting />
-          <HeaderLogout />
         </div>
 
     } else {
       loggedInOrOut =
       <div className="logged-out">
-        <HeaderLogin />
+        <div className="header-log-button" >
+          Login or Register
+        </div>
       </div>
     }
 

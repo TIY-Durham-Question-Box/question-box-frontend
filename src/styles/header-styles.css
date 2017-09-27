@@ -24,25 +24,6 @@
   height: 38px;
   padding: 2px;
 }
-.logged-in{
-  display: grid;
-  grid-template-columns: 50% 50%;
-  font-size: 12px;
-}
-.header-logout-button{
-  background-color: orange;
-  height: 36px;
-  width: 96%;
-  color: black;
-  border: 1px solid grey;
-  border-radius: 10%;
-}
-.header-logout-button button{
-  height: 100%;
-  width: 100%;
-  background: 0;
-  border: 0;
-}
 .header-search-button{
   background-color: grey;
   width: 21%;
@@ -66,16 +47,26 @@
   border: 1px solid grey;
   border-right: none;
 }
+.logged-in{
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 15px;
+}
 .logged-out{
   display: flex;
   flex-direction: row-reverse;
+  font-size: 15px;
 }
-.header-login-button{
+.header-log-button{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: orange;
   height: 36px;
-  width: 80%;
+  width: 96%;
   color: black;
   border: 1px solid grey;
   border-radius: 8px;
   text-align: center;
+  cursor: pointer;
 }
