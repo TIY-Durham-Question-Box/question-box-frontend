@@ -34,11 +34,12 @@ export default class QuestionForm extends Component {
         if (/^[0-9a-zA-Z,-]*$/.test(event.target.value[event.target.value.length-1])) {
           this.setState({tagsinput: event.target.value});
         } else if (/^[ ]*$/.test(event.target.value[event.target.value.length-1]) && event.target.value !== " "){
-          if (this.state.tags.indexOf(event.target.value.slice(0, -1)) !== -1){
+          var valuetocheck = event.target.value.toLowerCase();
+          if (this.state.tags.indexOf(valuetocheck.slice(0, -1)) !== -1){
             console.log("no stop");
           } else {
             this.setState(prevState => ({
-                tags: [...prevState.tags, this.state.tagsinput],
+                tags: [...prevState.tags, this.state.tagsinput.toLowerCase()],
                 tagsinput: ""
               }))
           }
