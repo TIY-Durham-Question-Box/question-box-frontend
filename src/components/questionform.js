@@ -17,21 +17,38 @@ export default class QuestionForm extends Component {
   }
   submitquestion(event){
     event.preventDefault();
-    console.log("Question Submisson fired");
+    if(event.target.title.value.length < 3 || event.target.language.value.length < 2 || event.target.question.value.length < 5){
+      this.setState({tagerror: "You Need a longer descripton"});
+      return
+    } else {
+      var newquestiondata = {
+        title: this.state.title,
+        language: this.state.language,
+        body: this.state.question,
+      }
+      console.log(newquestiondata);
+      console.log(JSON.stringify(newquestiondata));
+      console.log("Question Submisson fired");
+      // var fetchConfig = { method: 'POST',
+      //               mode: 'cors',
+      //               body: JSON.stringify(newquestiondata),
+      //               cache: 'default' };
+      // fetch(`https://secure-beyond-80954.herokuapp.com/questions`, fetchConfig)
+      // .then(function(res){ console.log(res); })
+      // .then(function(data){ console.log(data)  })
+    }
     //Title to post:
-    console.log(event.target.title.value);
+    // console.log(event.target.title.value);
     //Language to post:
-    console.log(event.target.language.value);
+    // console.log(event.target.language.value);
     //Question to post:
-    console.log(event.target.question.value);
+    // console.log(event.target.question.value);
     //Tags to post:
-    console.log(event.target.tags.value);
+    // console.log(this.state.tags);
   }
   handleTextChange = (event) => {
-
     event.preventDefault();
     this.setState({tagerror: false});
-    //MAKE IT SO THAT PEOPLE CANNOT ADD THE SAME TAG TWICE
     if (this.state[event.target.id] !== undefined){
       if (event.target.id === "tagsinput"){
         if (/^[0-9a-zA-Z,-]*$/.test(event.target.value[event.target.value.length-1])) {
