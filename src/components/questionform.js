@@ -7,9 +7,10 @@ export default class QuestionForm extends Component {
     this.state = {
       title : "",
       question: "",
-      tags: "",
+      tagsinput: "",
       username: "",
-      language: ""
+      language: "",
+      tags: []
     }
     this.submitquestion = this.submitquestion.bind(this);
   }
@@ -28,21 +29,24 @@ export default class QuestionForm extends Component {
   handleTextChange = (event) => {
     event.preventDefault();
     if (this.state[event.target.id] !== undefined){
-      if (event.target.id === "tags"){
+      if (event.target.id === "tagsinput"){
         if (/^[0-9a-zA-Z,-]*$/.test(event.target.value[event.target.value.length-1])) {
-          console.log(event.target.value[event.target.value.length-1]);
-          console.log("FIRED");
-          this.setState({[event.target.id]: event.target.value});
+          this.setState({tagsinput: event.target.value});
         } else if (/^[ ]*$/.test(event.target.value[event.target.value.length-1])){
-          console.log("SPACE");
+          console.log(event.target.value);
+          this.setState(prevState => ({
+              tags: [...prevState.tags, this.state.tagsinput],
+              tagsinput: ""
+            }))
         }
         return
-      } else if (event.target.id !== "tags"){
+      } else if (event.target.id !== "tagsinput"){
         this.setState({[event.target.id]: event.target.value});
       }
     }
   }
   render() {
+    console.log(this.state.tags);
     return (
       <div className="body-component">
         <div className="questionform-component" >
@@ -61,8 +65,8 @@ export default class QuestionForm extends Component {
             placeholder="Type your question here" name="question" value={this.state.question} required/><br/>
 
             <label htmlFor="tags">Tags:</label>
-            <input pattern="^[0-9a-zA-Z,-]*$" onChange={this.handleTextChange} type="text" id="tags"
-            placeholder="tags" name="tags" value={this.state.tags}/><br/>
+            <input pattern="^[0-9a-zA-Z,-]*$" onChange={this.handleTextChange} type="text" id="tagsinput"
+            placeholder="tags" name="tagsinput" value={this.state.tagsinput}/><br/>
 
             <button className="question-form-submit-button" type="submit">Submit question</button>
           </form>
