@@ -6,13 +6,12 @@ export default class YourAnswer extends Component {
 
   render() {
     return (
-      <div className="answer-component">
-        <div className="answer-attribution">
+      <div className="your-answer-component">
+        <form onSubmit={this.props.data.handleSubmit}>
           <div>Your Answer</div>
-        </div>
-        <div className="answer-body">
-          <textarea />
-        </div>
+          <textarea onChange={this.props.data.setAnswer} value={this.props.data.answer}/>
+          <input type="Submit" value="Submit"/>
+        </form>
       </div>
     )
   }
