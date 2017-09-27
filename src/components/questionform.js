@@ -28,7 +28,18 @@ export default class QuestionForm extends Component {
   handleTextChange = (event) => {
     event.preventDefault();
     if (this.state[event.target.id] !== undefined){
-      this.setState({[event.target.id]: event.target.value});
+      if (event.target.id === "tags"){
+        if (/^[0-9a-zA-Z,-]*$/.test(event.target.value[event.target.value.length-1])) {
+          console.log(event.target.value[event.target.value.length-1]);
+          console.log("FIRED");
+          this.setState({[event.target.id]: event.target.value});
+        } else if (/^[ ]*$/.test(event.target.value[event.target.value.length-1])){
+          console.log("SPACE");
+        }
+        return
+      } else if (event.target.id !== "tags"){
+        this.setState({[event.target.id]: event.target.value});
+      }
     }
   }
   render() {
@@ -50,7 +61,7 @@ export default class QuestionForm extends Component {
             placeholder="Type your question here" name="question" value={this.state.question} required/><br/>
 
             <label htmlFor="tags">Tags:</label>
-            <input onChange={this.handleTextChange} type="text" id="tags"
+            <input pattern="^[0-9a-zA-Z,-]*$" onChange={this.handleTextChange} type="text" id="tags"
             placeholder="tags" name="tags" value={this.state.tags}/><br/>
 
             <button className="question-form-submit-button" type="submit">Submit question</button>
