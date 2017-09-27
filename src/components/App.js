@@ -6,10 +6,29 @@ import Home from './home.js';
 import Header from './header.js';
 import Footer from './footer.js';
 import React, { Component } from 'react';
+import cookie from 'react-cookies';
 import '../styles/App.css';
 
 
 export default class App extends Component {
+  constructor() {
+   super();
+   this.state = {
+     token: null
+   }
+ }
+
+ componentWillMount() {
+   this.setState({token: cookie.load('token')});
+ }
+
+ setToken(token) {
+   this.setState({token: token});
+   cookie.save('token', token);
+ }
+
+
+
   render() {
     return (
       <div>

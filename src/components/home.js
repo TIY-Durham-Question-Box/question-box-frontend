@@ -1,40 +1,41 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import { Link } from 'react-router-dom';
+import request from 'superagent';
 
 export default class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      questionsdata: false
-    }
-  }
-  fetchData = () => {
-    var fetchConfig = { method: 'GET',
-                  mode: 'cors',
-                  cache: 'default' };
-    fetch(`https://secure-beyond-80954.herokuapp.com/questions`, fetchConfig).then(results => {
-        return results.json();
-      }).then(data => {
-        this.setState({ questionsdata:data.questions });
-    })
+      testdata: false
+    };
+
   }
   componentWillMount(){
-    this.fetchData();
+    request
+      .get('https://secure-beyond-80954.herokuapp.com/questions')
+      .end((err,res) => {
+        this.setState({testdata: JSON.parse(res.text)});
+      })
+
   }
   render() {
-    let questions = false;
-    if (this.state.questionsdata){
-      questions = this.state.questionsdata.map((x, i) => {
-        console.log(x);
-        return(
-          <div key={x}>
-            <p>{x.title}</p>
-          </div>
-        )
+    let allQuestions = this.state.testdata;
+    let questionLink;
+    console.log(allQuestions);
+    if(allQuestions){
+      questionLink = allQuestions.questions.map((questionLink) =>{
+        return(<button key={questionLink.id} className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>)
       })
-    }
-    // console.log(this.state.testdata);
+    } else {
+      questionLink = () => {
+        return(<p>questionLink is missing</p>);
+      }
+    };
+
+
+
+
     return (
       <div className="body-component">
       <div className="home-component" >
@@ -46,9 +47,8 @@ export default class Home extends Component {
             </div>
             <div className="recently-asked-questions-homepage">
               <h3>Recently Asked Questions:</h3>
-              {questions ? questions : ""}
               <button className="homepage-ask-a-question-button"><Link to="/addquestion">Ask a Question!</Link></button>
-              <button className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>
+              {questionLink}
             </div>
           </div>
         </div>
