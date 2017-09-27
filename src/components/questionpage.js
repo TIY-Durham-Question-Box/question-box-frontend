@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/question-page.css';
+import '../styles/App.css';
 import Answers from './questionpage-components/answers.js';
 import YourAnswer from './questionpage-components/your-answer.js';
 
@@ -54,7 +55,7 @@ export default class QuestionPage extends Component {
     }
 
     return (
-      <div>
+      <div className="body-component">
           <div className="questionpage-component" >
             <form onSubmit={this.handleSubmit}>
             <h1>Question Page</h1>

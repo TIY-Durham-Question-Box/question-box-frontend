@@ -33,27 +33,29 @@ export default class QuestionForm extends Component {
   }
   render() {
     return (
-      <div className="questionform-component" >
-        <form className="question-form-container" onSubmit={this.submitquestion}>
-        <h2>Ask a Question!</h2>
-          <label htmlFor="title">Title:</label>
-          <input onChange={this.handleTextChange} type="text" id="title"
-          placeholder="Title" name="title" value={this.state.title} required/><br/>
+      <div className="body-component">
+        <div className="questionform-component" >
+          <form className="question-form-container" onSubmit={this.submitquestion}>
+          <h2>Ask a Question!</h2>
+            <label htmlFor="title">Title:</label>
+            <input onChange={this.handleTextChange} type="text" id="title"
+            placeholder="Title" name="title" value={this.state.title} required/><br/>
 
-          <label htmlFor="language">Language:</label>
-          <input onChange={this.handleTextChange} type="text" id="language"
-          placeholder="Language" name="language" value={this.state.language} required/><br/>
+            <label htmlFor="language">Language:</label>
+            <input onChange={this.handleTextChange} type="text" id="language"
+            placeholder="Language" name="language" value={this.state.language} required/><br/>
 
-          <label htmlFor="question">Question:</label>
-          <textarea onChange={this.handleTextChange} type="text" id="question" className="questionform-textarea"
-          placeholder="Type your question here" name="question" value={this.state.question} required/><br/>
+            <label htmlFor="question">Question:</label>
+            <textarea onChange={this.handleTextChange} type="text" id="question" className="questionform-textarea"
+            placeholder="Type your question here" name="question" value={this.state.question} required/><br/>
 
-          <label htmlFor="tags">Tags:</label>
-          <input onChange={this.handleTextChange} type="text" id="tags"
-          placeholder="tags" name="tags" value={this.state.tags}/><br/>
+            <label htmlFor="tags">Tags:</label>
+            <input onChange={this.handleTextChange} type="text" id="tags"
+            placeholder="tags" name="tags" value={this.state.tags}/><br/>
 
-          <button className="question-form-submit-button" type="submit">Submit question</button>
-        </form>
+            <button className="question-form-submit-button" type="submit">Submit question</button>
+          </form>
+        </div>
       </div>
     )
   }

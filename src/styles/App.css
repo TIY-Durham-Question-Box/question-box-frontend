@@ -25,7 +25,9 @@ body{
   }
 }
 
-
+.body-component{
+  margin-top: 120px;
+}
 
 /*LOGIN AND REGISTRATION AND QUESTION STYLES*/
 

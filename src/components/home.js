@@ -19,6 +19,7 @@ export default class Home extends Component {
   render() {
     // console.log(this.state.testdata);
     return (
+      <div className="body-component">
       <div className="home-component" >
         <h1 className="homepage-welcome-header">Welcome to Question Box!</h1>
         <button className="homepage-ask-a-question-button"><Link to="/login">LOGIN TEST</Link></button>
@@ -79,6 +80,7 @@ export default class Home extends Component {
               <button className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>
             </div>
           </div>
+        </div>
       </div>
     )
   }
