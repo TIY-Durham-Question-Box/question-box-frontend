@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/header-styles.css';
 import '../styles/App.css';
-import HeaderGreeting from './header-components/header-greeting.js';
 import HeaderSearch from './header-components/search-bar.js';
 import logo from './header-components/logo.png';
 
@@ -18,7 +17,9 @@ export default class Header extends Component {
           <div className="header-log-button" >
             Log Out
           </div>
-          <HeaderGreeting />
+          <div className="header-greeting-component" >
+            Hello, User.
+          </div>
         </div>
 
     } else {
