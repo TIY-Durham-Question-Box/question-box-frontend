@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
+    "react-cookies": "^0.1.0",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.13",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "superagent": "^3.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/TIY-Durham-Question-Box/question-box-frontend/issues"
   },
-  "homepage": "https://github.com/TIY-Durham-Question-Box/question-box-frontend#readme"
+  "homepage": "https://github.com/TIY-Durham-Question-Box/question-box-frontend#readme",
+  "devDependencies": {}
 }

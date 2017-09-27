@@ -1,23 +1,34 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import { Link } from 'react-router-dom';
+import request from 'superagent';
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      testdata: false
+      testdata: []
     };
+
   }
   componentWillMount(){
-    // fetch('https://memorygameapi.herokuapp.com/stats').then(results => {
-    //   return results.json();
-    // }).then(data => {
-    //   this.setState({ testdata: data})
-    // })
+    request
+      .get('https://secure-beyond-80954.herokuapp.com/questions')
+      .end((err,res) => {
+        console.log(err);
+        console.log(res.text);
+        this.setState({testdata: res.text});
+      })
+
   }
   render() {
     // console.log(this.state.testdata);
+    let allQuestions = this.state.testdata;
+    let questionLink = allQuestions.map((questionLink) =>{
+      return(<button className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>)
+    });
+
+
     return (
       <div className="body-component">
       <div className="home-component" >
@@ -30,7 +41,7 @@ export default class Home extends Component {
             <div className="recently-asked-questions-homepage">
               <h3>Recently Asked Questions:</h3>
               <button className="homepage-ask-a-question-button"><Link to="/addquestion">Ask a Question!</Link></button>
-              <button className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>
+              {questionLink}
             </div>
           </div>
         </div>
