@@ -24,8 +24,8 @@ export default class Register extends Component {
       this.setState({registrationerror:"Username must be at least 4 characters"});
       return
     }
-    if (this.state.name.length < 3){
-      this.setState({registrationerror:"Name must be at least 3 characters"});
+    if (this.state.name.length < 2){
+      this.setState({registrationerror:"Name must be at least 2 characters"});
       return
     }
     if (this.state.secondpassword.length < 4){
@@ -35,16 +35,21 @@ export default class Register extends Component {
     if (this.state.email.length < 5){
       this.setState({registrationerror:"Email must be at least 5 characters"});
       return
+    }  else {
+      var newuserdata = {
+        username: this.state.username,
+        name: this.state.name,
+        email: this.state.email,
+        password: this.state.secondpassword,
+      }
+      console.log("User Registered fired");
+      var fetchConfig = { method: 'POST',
+                    mode: 'cors',
+                    body: JSON.stringify(newuserdata),
+                    cache: 'default' };
+      fetch(`https://secure-beyond-80954.herokuapp.com/user`, fetchConfig)
+      .then(function(res){ console.log(res); })
     }
-    console.log("register fired");
-    //Username to post:
-    console.log(this.state.username);
-    //Name to post:
-    console.log(this.state.name);
-    //Password to post:
-    console.log(this.state.secondpassword);
-    //Email to post:
-    console.log(this.state.email);
   }
   handleTextChange = (event) => {
     this.setState({registrationerror:false});

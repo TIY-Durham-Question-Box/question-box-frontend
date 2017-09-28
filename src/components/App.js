@@ -6,7 +6,7 @@ import Home from './home.js';
 import Header from './header.js';
 import Footer from './footer.js';
 import React, { Component } from 'react';
-import cookie from 'react-cookies';
+import cookies from 'react-cookies';
 import '../styles/App.css';
 
 
