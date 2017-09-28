@@ -35,22 +35,16 @@ export default class QuestionForm extends Component {
       console.log(newquestiondata);
       console.log(JSON.stringify(newquestiondata));
       console.log("Question Submisson fired");
-      // var fetchConfig = { method: 'POST',
-      //               mode: 'cors',
-      //               body: JSON.stringify(newquestiondata),
-      //               cache: 'default' };
-      // fetch(`https://secure-beyond-80954.herokuapp.com/questions`, fetchConfig)
-      // .then(function(res){ console.log(res); })
-      // .then(function(data){ console.log(data)  })
+      var fetchConfig = { method: 'POST',
+                    mode: 'cors',
+                    body: JSON.stringify(newquestiondata),
+                    cache: 'default' };
+      fetch(`https://secure-beyond-80954.herokuapp.com/questions`, fetchConfig)
+      .then(function(res){
+        console.log(res);
+      //if response 401, say "not authed"
+     })
     }
-    //Title to post:
-    // console.log(event.target.title.value);
-    //Language to post:
-    // console.log(event.target.language.value);
-    //Question to post:
-    // console.log(event.target.question.value);
-    //Tags to post:
-    // console.log(this.state.tags);
   }
   handleTextChange = (event) => {
     event.preventDefault();
