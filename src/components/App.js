@@ -19,13 +19,14 @@ export default class App extends Component {
  }
 
  componentWillMount() {
-   this.setState({token: cookies.load('token')});
+   this.setState({token: 'GmV3P9ny7gqG3KmQgM9Sov1D'});
+   const userToken = this.token;
  }
 
- setToken(token) {
-   this.setState({token: token});
-   cookies.save('token', token);
- }
+ // setToken(token) {
+ //   this.setState({token: token});
+ //   cookie.save('token', token);
+ // }
 
 
 

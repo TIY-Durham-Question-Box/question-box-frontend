@@ -3,6 +3,7 @@ import '../styles/question-page.css';
 import '../styles/App.css';
 import Answers from './questionpage-components/answers.js';
 import YourAnswer from './questionpage-components/your-answer.js';
+import request from 'superagent'
 
 export default class QuestionPage extends Component {
   constructor(){
@@ -17,6 +18,7 @@ export default class QuestionPage extends Component {
       language: '',
       tags: '',
       question: '',
+      testdata: false,
       history: []
     }
   }
@@ -29,6 +31,24 @@ export default class QuestionPage extends Component {
     if (this.state[event.target.id] !== undefined){
       this.setState({[event.target.id]: event.target.value});
     }
+  }
+  componentWillMount(){
+    request
+      .get('https://secure-beyond-80954.herokuapp.com/questions'+'/'+'5')
+      // Pass token as variable in set method
+      .set('Authorization', `Token token=GmV3P9ny7gqG3KmQgM9Sov1D`)
+      .end((err,res) => {
+        console.log(JSON.parse(res.text));
+        let requestResponse = JSON.parse(res.text);
+        this.setState({
+          questionId: requestResponse.question.id,
+          title: requestResponse.question.title,
+          language: requestResponse.question.language,
+          question: requestResponse.question.body
+        });
+
+      })
+
   }
   render() {
     let allAnswers = this.state.history;

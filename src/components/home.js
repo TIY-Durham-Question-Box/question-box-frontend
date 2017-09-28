@@ -25,7 +25,12 @@ export default class Home extends Component {
     console.log(allQuestions);
     if(allQuestions){
       questionLink = allQuestions.questions.map((questionLink) =>{
-        return(<button key={questionLink.id} className="homepage-ask-a-question-button"><Link to="/viewquestion">View a Question</Link></button>)
+        return(
+          <button key={questionLink.id} className="homepage-ask-a-question-button">
+            <Link to={"/viewquestion"+"/"+questionLink.id}>
+              {questionLink.title}
+            </Link>
+          </button>)
       })
     } else {
       questionLink = () => {
