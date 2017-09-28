@@ -20,7 +20,6 @@ export default class App extends Component {
 
  componentWillMount() {
    this.setState({token: 'GmV3P9ny7gqG3KmQgM9Sov1D'});
-   const userToken = this.token;
  }
 
  // setToken(token) {
@@ -41,7 +40,7 @@ export default class App extends Component {
             <Switch>
               <Route path="/login" component={LoginRegistrationPage} />
               <Route path="/addquestion" component={QuestionForm} />
-              <Route path="/viewquestion" component={QuestionPage} />
+              <Route path="/viewquestion" render={(props) => (<QuestionPage token={this.state.token}/>)} />
               <Route path="/" component={Home}/>
             </Switch>
           </div>
