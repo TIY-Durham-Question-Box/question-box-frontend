@@ -33,15 +33,13 @@ export default class QuestionPage extends Component {
     }
   }
   componentWillMount(){
-    console.log(typeof "this.props.location.pathname");
-    console.log();
+    let api = 'https://secure-beyond-80954.herokuapp.com';
     request
       // Pass question.id as ? in ? method.
-      .get('https://secure-beyond-80954.herokuapp.com'+'/questions/'+ this.props.linkId)
+      .get(api+'/questions/'+ this.props.linkId)
       // Pass token as prop in set method
       .set('Authorization', `Token token=${this.props.token}`)
       .end((err,res) => {
-        console.log(JSON.parse(res.text));
         let requestResponse = JSON.parse(res.text);
         this.setState({
           questionId: requestResponse.question.id,
@@ -49,9 +47,20 @@ export default class QuestionPage extends Component {
           language: requestResponse.question.language,
           question: requestResponse.question.body
         });
-
       })
 
+    request
+      .get(api+'/questions/'+this.props.linkId+'/answers')
+      .set('Authorization', `Token token=${this.props.token}`)
+      .end((err,res)=>{
+        console.log(typeof JSON.parse(res.text));
+        console.log(JSON.parse(res.text));
+        let requestResponse = JSON.parse(res.text);
+        console.log(requestResponse.question.answers);
+        this.setState({
+          history: requestResponse.question.answers
+        })
+      })
   }
   render() {
     let allAnswers = this.state.history;
