@@ -34,13 +34,17 @@ export default class QuestionPage extends Component {
   }
   componentWillMount(){
     request
-      .get('https://secure-beyond-80954.herokuapp.com/questions')
+      .get('https://secure-beyond-80954.herokuapp.com/questions'+'/'+'5')
+      // Pass token as variable in set method
+      .set('Authorization', `Token token=GmV3P9ny7gqG3KmQgM9Sov1D`)
       .end((err,res) => {
+        console.log(JSON.parse(res.text));
         let requestResponse = JSON.parse(res.text);
         this.setState({
-          questionId: requestResponse.questions[0].id,
-          title: requestResponse.questions[0].title,
-          language: requestResponse.questions[0].language
+          questionId: requestResponse.question.id,
+          title: requestResponse.question.title,
+          language: requestResponse.question.language,
+          question: requestResponse.question.body
         });
 
       })
