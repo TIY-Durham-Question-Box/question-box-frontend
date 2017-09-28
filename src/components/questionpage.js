@@ -3,6 +3,7 @@ import '../styles/question-page.css';
 import '../styles/App.css';
 import Answers from './questionpage-components/answers.js';
 import YourAnswer from './questionpage-components/your-answer.js';
+import request from 'superagent'
 
 export default class QuestionPage extends Component {
   constructor(){
@@ -17,6 +18,7 @@ export default class QuestionPage extends Component {
       language: '',
       tags: '',
       question: '',
+      testdata: false,
       history: []
     }
   }
@@ -29,6 +31,18 @@ export default class QuestionPage extends Component {
     if (this.state[event.target.id] !== undefined){
       this.setState({[event.target.id]: event.target.value});
     }
+  }
+  // refactor componentWillMount after success
+  componentWillMount(){
+    request
+      .get('https://secure-beyond-80954.herokuapp.com/questions')
+      .end((err,res) => {
+        this.setState({testdata: JSON.parse(res.text)});
+        this.setState({questionId: this.state.testdata.questions[0].id});
+        this.setState({title: this.state.testdata.questions[0].title, language: this.state.testdata.questions[0].language});
+
+      })
+
   }
   render() {
     let allAnswers = this.state.history;
