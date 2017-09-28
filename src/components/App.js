@@ -14,14 +14,22 @@ export default class App extends Component {
   constructor() {
    super();
    this.state = {
-     token: null
+     token: null,
+     linkId: null
    }
+
+   this.setLinkId=this.setLinkId.bind(this)
+ }
+
+ setLinkId=(e)=>{
+   console.log("e.target.id = " + e.target.id);
+   this.setState({linkId: e.target.id});
  }
 
  componentWillMount() {
    this.setState({token: 'GmV3P9ny7gqG3KmQgM9Sov1D'});
-   const userToken = this.token;
  }
+
 
  // setToken(token) {
  //   this.setState({token: token});
@@ -41,8 +49,8 @@ export default class App extends Component {
             <Switch>
               <Route path="/login" component={LoginRegistrationPage} />
               <Route path="/addquestion" component={QuestionForm} />
-              <Route path="/viewquestion" component={QuestionPage} />
-              <Route path="/" component={Home}/>
+              <Route path="/questions/" render={(props) => (<QuestionPage token={this.state.token} linkId={this.state.linkId}/>)} />
+              <Route path="/" render={(props) => (<Home setLinkId={this.setLinkId}/>)} />
             </Switch>
           </div>
         </BrowserRouter>

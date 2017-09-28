@@ -33,10 +33,13 @@ export default class QuestionPage extends Component {
     }
   }
   componentWillMount(){
+    console.log(typeof "this.props.location.pathname");
+    console.log();
     request
-      .get('https://secure-beyond-80954.herokuapp.com/questions'+'/'+'5')
-      // Pass token as variable in set method
-      .set('Authorization', `Token token=GmV3P9ny7gqG3KmQgM9Sov1D`)
+      // Pass question.id as ? in ? method.
+      .get('https://secure-beyond-80954.herokuapp.com'+'/questions/'+ this.props.linkId)
+      // Pass token as prop in set method
+      .set('Authorization', `Token token=${this.props.token}`)
       .end((err,res) => {
         console.log(JSON.parse(res.text));
         let requestResponse = JSON.parse(res.text);
