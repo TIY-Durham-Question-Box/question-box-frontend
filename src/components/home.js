@@ -27,7 +27,7 @@ export default class Home extends Component {
       questionLink = allQuestions.questions.map((questionLink) =>{
         return(
           <button key={questionLink.id} className="homepage-ask-a-question-button">
-            <Link to="/viewquestion">
+            <Link to={"/viewquestion"+"/"+questionLink.id}>
               {questionLink.title}
             </Link>
           </button>)
