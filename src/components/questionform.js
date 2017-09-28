@@ -40,7 +40,10 @@ export default class QuestionForm extends Component {
                     body: JSON.stringify(newquestiondata),
                     cache: 'default' };
       fetch(`https://secure-beyond-80954.herokuapp.com/questions`, fetchConfig)
-      .then(function(res){ console.log(res); })
+      .then(function(res){
+        console.log(res);
+      //if response 401, say "not authed"
+     })
     }
   }
   handleTextChange = (event) => {
