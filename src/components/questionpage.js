@@ -32,7 +32,6 @@ export default class QuestionPage extends Component {
       this.setState({[event.target.id]: event.target.value});
     }
   }
-  // refactor componentWillMount after success
   componentWillMount(){
     request
       .get('https://secure-beyond-80954.herokuapp.com/questions')
