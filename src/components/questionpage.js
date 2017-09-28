@@ -37,9 +37,12 @@ export default class QuestionPage extends Component {
     request
       .get('https://secure-beyond-80954.herokuapp.com/questions')
       .end((err,res) => {
-        this.setState({testdata: JSON.parse(res.text)});
-        this.setState({questionId: this.state.testdata.questions[0].id});
-        this.setState({title: this.state.testdata.questions[0].title, language: this.state.testdata.questions[0].language});
+        let requestResponse = JSON.parse(res.text);
+        this.setState({
+          questionId: requestResponse.questions[0].id,
+          title: requestResponse.questions[0].title,
+          language: requestResponse.questions[0].language
+        });
 
       })
 
