@@ -7,8 +7,8 @@ export default class Answers extends Component {
     return (
       <div className="answer-component">
         <div className="answer-attribution">
-          <div>Answer {this.props.data.userId}</div>
-          <div>by {this.props.data.user}</div>
+          <div>Answer {this.props.data.answerId}</div>
+          <div>by {this.props.data.author}</div>
         </div>
         <div className="answer-body">
           <textarea readOnly value={this.props.data.body}/>
