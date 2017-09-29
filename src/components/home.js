@@ -37,15 +37,25 @@ export default class Home extends Component {
     };
     return (
       <div className="body-component">
-      <div className="home-component" >
-        <h1 className="homepage-welcome-header">Welcome to Question Box!</h1>
+        <div className="home-component" >
+          <h1 className="centered homepage-welcome-header">
+            Welcome to Question Box!
+          </h1>
           <div className="homepage-container">
             <div className="popular-tags-homepage">
-              <h3>Popular Tags:</h3>
+              <h3 className="centered">
+                Popular Tags:
+              </h3>
             </div>
             <div className="recently-asked-questions-homepage">
-              <h3>Recently Asked Questions:</h3>
-              <button className="homepage-ask-a-question-button"><Link to="/addquestion">Ask a Question!</Link></button>
+              <h3 className="centered">
+                Recently Asked Questions:
+              </h3>
+              <button className="homepage-ask-a-question-button">
+                <Link to="/addquestion">
+                  Ask a Question!
+                </Link>
+              </button>
               {questionLink}
             </div>
           </div>
