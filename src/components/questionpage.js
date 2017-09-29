@@ -25,9 +25,11 @@ export default class QuestionPage extends Component {
   handleSubmit = (e) => {
     e.prevendDefault();
     console.log(this.state);
+
   }
   handleTextChange = (event) => {
     event.preventDefault();
+    console.log(event.target.id);
     if (this.state[event.target.id] !== undefined){
       this.setState({[event.target.id]: event.target.value});
     }
@@ -65,7 +67,7 @@ export default class QuestionPage extends Component {
   render() {
     let allAnswers = this.state.history;
     let answers = allAnswers.map((answers)=>{
-      return(<Answers key={answers.answerId} data={answers} />)
+      return(<Answers key={answers} data={answers} />)
     });
     let locked = false;
     let editButton = null;
@@ -100,7 +102,7 @@ export default class QuestionPage extends Component {
               {editButton}
             </form>
               {answers}
-            <YourAnswer data={this.state} />
+            <YourAnswer value={this.state.answer} />
           </div>
       </div>
     )

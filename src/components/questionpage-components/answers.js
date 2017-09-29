@@ -8,10 +8,10 @@ export default class Answers extends Component {
       <div className="answer-component">
         <div className="answer-attribution">
           <div>Answer {this.props.data.answerId}</div>
-          <div>by {this.props.data.user}</div>
+          <div>by {this.props.data.author}</div>
         </div>
         <div className="answer-body">
-          <textarea readOnly value={this.props.data.answer}/>
+          <textarea readOnly value={this.props.data.body}/>
         </div>
       </div>
     )
