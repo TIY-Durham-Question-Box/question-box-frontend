@@ -61,27 +61,66 @@ export default class Register extends Component {
   render() {
     return (
       <div className="loginregister-form-holder">
-        <form className="loginregister-form-container" onSubmit={this.register}>
-        <h2>Register</h2>
-          <label htmlFor="username">Display Username:</label>
-          <input onChange={this.handleTextChange} type="text" id="username"
-          placeholder="Username" name="username" value={this.state.username} required/><br/>
-          <label htmlFor="name">Name:</label>
-          <input onChange={this.handleTextChange} type="text" id="name"
-          placeholder="Name" name="name" value={this.state.name} required/><br/>
-          <label htmlFor="password">Password:</label>
-          <input onChange={this.handleTextChange} type="password" id="password"
-          placeholder="Password" name="password" value={this.state.password} required/><br/>
-          <label htmlFor="secondpassword">Re-Enter Password:</label>
-          <input onChange={this.handleTextChange} type="password" id="secondpassword"
-          placeholder="Password Again" name="secondpassword" value={this.state.secondpassword} required/><br/>
-          <label htmlFor="email">Email:</label>
-          <input onChange={this.handleTextChange} type="email" id="email"
-          placeholder="Email" name="email" value={this.state.email} required/><br/>
+        <form className="centered loginregister-form-container" onSubmit={this.register}>
+        <h2 className="login-register-h2">Register</h2>
+          <label htmlFor="username">
+            Display Username:
+          </label>
+          <input className="centered"
+            onChange={this.handleTextChange}
+            type="text" id="username"
+            placeholder="Username"
+            name="username"
+            value={this.state.username} required/>
           <br/>
-          {this.state.registrationerror? (<p className="errormessage">{this.state.registrationerror}</p>) : ""}
+          <label htmlFor="name">
+            Name:
+          </label>
+          <input className="centered"
+            onChange={this.handleTextChange}
+            type="text" id="name"
+            placeholder="Name"
+            name="name"
+            value={this.state.name} required/>
           <br/>
-          <button className="loginregister-submit-button" type="submit">Register</button>
+          <label htmlFor="password">
+            Password:
+          </label>
+          <input className="centered"
+            onChange={this.handleTextChange}
+            type="password" id="password"
+            placeholder="Password"
+            name="password"
+            value={this.state.password} required/>
+          <br/>
+          <label htmlFor="secondpassword">
+            Re-Enter Password:
+          </label>
+          <input className="centered"
+            onChange={this.handleTextChange}
+            type="password" id="secondpassword"
+            placeholder="Password Again"
+            name="secondpassword"
+            value={this.state.secondpassword} required/>
+          <br/>
+          <label htmlFor="email">
+            Email:
+          </label>
+          <input className="centered"
+            onChange={this.handleTextChange}
+            type="email" id="email"
+            placeholder="Email"
+            name="email"
+            value={this.state.email} required/>
+          <br/>
+          <br/>
+          {this.state.registrationerror
+            ? (<p className="errormessage">{this.state.registrationerror}</p>)
+            : ""}
+          <br/>
+          <button className="loginregister-submit-button" type="submit">
+            Register
+          </button>
         </form>
       </div>
     )

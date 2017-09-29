@@ -4,20 +4,20 @@ import '../styles/footer-styles.css';
 export default class Footer extends Component {
   render() {
     return(
-      <div className="footer-component" >
-        <div className="footer-component-a">
+      <div className="centered footer-wrapper">
+        <div className="footer-component">
           Question Box, Ltd.
         </div>
-        <div className="footer-component-b">
+        <div className="footer-component">
           Copyright 2017 under MIT liscense
         </div>
-        <div className="footer-component-c">
+        <div className="footer-component">
           Cookies Disclaimer
         </div>
-        <div className="footer-component-d">
+        <div className="footer-component">
           Terms of Service
         </div>
-        <div className="footer-component-e">
+        <div className="footer-component">
           Contact Us
         </div>
       </div>
