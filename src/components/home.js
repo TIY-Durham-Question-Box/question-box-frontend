@@ -24,11 +24,18 @@ export default class Home extends Component {
     if(allQuestions){
       questionLink = allQuestions.questions.map((questionLink) =>{
         return(
-          <button key={questionLink.id} id={questionLink.id} className="homepage-ask-a-question-button" onClick={this.props.setLinkId}>
-            <Link to={"/questions/"+questionLink.id} id={questionLink.id}>
+          <a key={questionLink.id}
+            id={questionLink.id}
+            className="centered"
+            onClick={this.props.setLinkId}>
+            <br/>
+            <Link to={"/questions/"+questionLink.id}
+              id={questionLink.id}>
               {questionLink.title}
             </Link>
-          </button>)
+            <br/>
+          </a>
+        )
       })
     } else {
       questionLink = () => {
