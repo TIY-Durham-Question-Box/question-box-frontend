@@ -38,10 +38,8 @@ button {
 }
 @media (min-width: 800px){
   .body-component{
-    /*background-image: url(skybackground.gif);*/
     margin-left: 5vw;
     margin-right: 5vw;
-    /*border: 1px solid black;*/
   }
 }
 @keyframes errorcolorchange {
@@ -121,6 +119,7 @@ button {
 }
 .question-x-box{
   border-left: 1px solid black;
+  cursor: pointer;
   padding: 0 5px;
   color: red
 }
