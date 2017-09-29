@@ -212,3 +212,14 @@ button {
   text-decoration: none;
   color: black;
 }
+
+/*FOOTER STYLES*/
+.footer-component {
+  display: inline-block;
+  padding: 1em;
+  font-size: .75em;
+}
+
+.footer-wrapper {
+  color: rgb(85, 177, 222);
+}
