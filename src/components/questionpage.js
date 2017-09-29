@@ -67,7 +67,8 @@ export default class QuestionPage extends Component {
   render() {
     let allAnswers = this.state.history;
     let answers = allAnswers.map((answers)=>{
-      return(<Answers key={answers} data={answers} />)
+      console.log('Times mapped through answers: '+answers.id);
+      return(<Answers key={answers.id} data={answers} />)
     });
     let locked = false;
     let editButton = null;
@@ -103,6 +104,7 @@ export default class QuestionPage extends Component {
             </form>
               {answers}
             <YourAnswer value={this.state.answer} />
+
           </div>
       </div>
     )
