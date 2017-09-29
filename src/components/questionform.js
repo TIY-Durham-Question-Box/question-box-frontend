@@ -53,7 +53,8 @@ export default class QuestionForm extends Component {
       if (event.target.id === "tagsinput"){
         if (/^[0-9a-zA-Z,-]*$/.test(event.target.value[event.target.value.length-1])) {
           this.setState({tagsinput: event.target.value});
-        } else if (/^[ ]*$/.test(event.target.value[event.target.value.length-1]) && event.target.value !== " "){
+        } else if (/^[ ]*$/.test(event.target.value[event.target.value.length-1])
+          && event.target.value !== " "){
           var valuetocheck = event.target.value.toLowerCase();
           if (this.state.tags.indexOf(valuetocheck.slice(0, -1)) !== -1){
             this.setState({tagerror: "You already have that tag!"});
@@ -61,7 +62,9 @@ export default class QuestionForm extends Component {
             this.setState(prevState => ({
                 tags: [...prevState.tags, this.state.tagsinput.toLowerCase()],
                 tagsinput: ""
-              }))
+              })
+
+            )
           }
         }
         return
@@ -88,29 +91,59 @@ export default class QuestionForm extends Component {
       <div className="body-component">
         <div className="questionform-component" >
           <form className="question-form-container" onSubmit={this.submitquestion}>
-          <h2>Ask a Question!</h2>
-            <label htmlFor="title">Title:</label>
-            <input onChange={this.handleTextChange} type="text" id="title"
-            placeholder="Title" name="title" value={this.state.title} required/><br/>
-
-            <label htmlFor="language">Language:</label>
-            <input onChange={this.handleTextChange} type="text" id="language"
-            placeholder="Language" name="language" value={this.state.language} required/><br/>
-
-            <label htmlFor="question">Question:</label>
-            <textarea onChange={this.handleTextChange} type="text" id="question" className="questionform-textarea"
-            placeholder="Type your question here" name="question" value={this.state.question} required/><br/>
-
-            <label htmlFor="tags">Tags:</label>
-            <input pattern="^[0-9a-zA-Z,-]*$" onChange={this.handleTextChange} type="text" id="tagsinput"
-            placeholder="tags" name="tagsinput" value={this.state.tagsinput}/><br/>
+            <h2>
+              Ask a Question!
+            </h2>
+            <label htmlFor="title">
+              Title:
+            </label>
+            <input onChange={this.handleTextChange}
+              type="text" id="title"
+              placeholder="Title"
+              name="title"
+              value={this.state.title} required/>
             <br/>
-            {this.state.tagerror? (<p className="errormessage">{this.state.tagerror}</p>) : ""}
+            <label htmlFor="language">
+              Language:
+            </label>
+            <input
+              onChange={this.handleTextChange}
+              type="text" id="language"
+              placeholder="Language"
+              name="language"
+              value={this.state.language} required/>
+            <br/>
+            <label htmlFor="question">
+              Question:
+            </label>
+            <textarea onChange={this.handleTextChange}
+              type="text" id="question"
+              className="questionform-textarea"
+              placeholder="Type your question here"
+              name="question"
+              value={this.state.question} required/>
+            <br/>
+            <label htmlFor="tags">
+              Tags:
+            </label>
+            <input pattern="^[0-9a-zA-Z,-]*$"
+              onChange={this.handleTextChange}
+              type="text" id="tagsinput"
+              placeholder="tags"
+              name="tagsinput"
+              value={this.state.tagsinput}/>
+            <br/>
+            <br/>
+            {this.state.tagerror
+              ? (<p className="errormessage">{this.state.tagerror}</p>)
+              : ""}
             <br/>
             <div>
               {tags}
             </div>
-            <button className="question-form-submit-button" type="submit">Submit question</button>
+            <button className="question-form-submit-button" type="submit">
+              Submit question
+            </button>
           </form>
         </div>
       </div>

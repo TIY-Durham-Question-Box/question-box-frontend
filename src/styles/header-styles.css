@@ -1,5 +1,5 @@
 .header-component{
-  background-image: url(skybackground.gif);
+  background-image: url(../images/skybackground.gif);
   background-size: cover;
   top: 0;
   position: fixed;
@@ -59,7 +59,7 @@
   font-size: 15px;
 }
 .header-log-button{
-  background-image: url(a_green_cartoon_pipe.png);
+  background-image: url(../images/a_green_cartoon_pipe.png);
   /*background-size: cover;*/
   background-size: 150% 45px;
   background-position: left center;

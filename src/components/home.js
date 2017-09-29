@@ -9,7 +9,6 @@ export default class Home extends Component {
     this.state = {
       testdata: false
     };
-
   }
   componentWillMount(){
     request
@@ -17,7 +16,6 @@ export default class Home extends Component {
       .end((err,res) => {
         this.setState({testdata: JSON.parse(res.text)});
       })
-
   }
   render() {
     let allQuestions = this.state.testdata;
@@ -26,33 +24,45 @@ export default class Home extends Component {
     if(allQuestions){
       questionLink = allQuestions.questions.map((questionLink) =>{
         return(
-          <button key={questionLink.id} id={questionLink.id} className="homepage-ask-a-question-button" onClick={this.props.setLinkId}>
-            <Link to={"/questions/"+questionLink.id} id={questionLink.id}>
+          <a key={questionLink.id}
+            id={questionLink.id}
+            className="centered"
+            onClick={this.props.setLinkId}>
+            <br/>
+            <Link to={"/questions/"+questionLink.id}
+              id={questionLink.id}>
               {questionLink.title}
             </Link>
-          </button>)
+            <br/>
+          </a>
+        )
       })
     } else {
       questionLink = () => {
         return(<p>questionLink is missing</p>);
       }
     };
-
-
-
-
     return (
       <div className="body-component">
-      <div className="home-component" >
-        <h1 className="homepage-welcome-header">Welcome to Question Box!</h1>
-        <button className="homepage-ask-a-question-button"><Link to="/login">LOGIN TEST</Link></button>
+        <div className="home-component" >
+          <h1 className="centered homepage-welcome-header">
+            Welcome to Question Box!
+          </h1>
           <div className="homepage-container">
             <div className="popular-tags-homepage">
-              <h3>Popular Tags:</h3>
+              <h3 className="centered">
+                Popular Tags:
+              </h3>
             </div>
             <div className="recently-asked-questions-homepage">
-              <h3>Recently Asked Questions:</h3>
-              <button className="homepage-ask-a-question-button"><Link to="/addquestion">Ask a Question!</Link></button>
+              <h3 className="centered">
+                Recently Asked Questions:
+              </h3>
+              <button className="homepage-ask-a-question-button">
+                <Link to="/addquestion">
+                  Ask a Question!
+                </Link>
+              </button>
               {questionLink}
             </div>
           </div>

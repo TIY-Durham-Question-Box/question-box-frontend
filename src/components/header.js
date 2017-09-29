@@ -15,7 +15,7 @@ export default class Header extends Component {
   }
   redirect = (event) => {
     event.preventDefault();
-      this.setState({ fireRedirect: true })
+    this.setState({ fireRedirect: true });
   }
   render() {
     let testloginvar = false;
@@ -31,7 +31,6 @@ export default class Header extends Component {
             Hello, User.
           </div>
         </div>
-
     } else {
       loggedInOrOut =
       <div className="logged-out">
@@ -42,7 +41,6 @@ export default class Header extends Component {
         </Link>
       </div>
     }
-
     return(
       <div className="header-component" >
         <h1 className="header-top-logo">
