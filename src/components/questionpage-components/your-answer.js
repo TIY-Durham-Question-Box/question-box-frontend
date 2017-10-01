@@ -9,7 +9,7 @@ export default class YourAnswer extends Component {
       <div className="your-answer-component">
         <form onSubmit={this.handleSubmit}>
           <div>Your Answer</div>
-          <textarea id="answer" onChange={this.handleTextChange} value={this.props.answer}/>
+          <textarea id="answer" onChange={this.props.onChange} value={this.props.value}/>
           <input type="Submit" value="Submit"/>
         </form>
       </div>

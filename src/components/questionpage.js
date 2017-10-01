@@ -103,8 +103,7 @@ export default class QuestionPage extends Component {
               {editButton}
             </form>
               {answers}
-            <YourAnswer value={this.state.answer} />
-
+            <YourAnswer onChange={this.handleTextChange} value={this.state.answer} />
           </div>
       </div>
     )
