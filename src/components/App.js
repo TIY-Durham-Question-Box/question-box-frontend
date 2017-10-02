@@ -40,9 +40,9 @@ export default class App extends Component {
             </nav>
             <Switch>
               <Route path="/login" component={LoginRegistrationPage} />
-              <Route path="/addquestion" component={QuestionForm} />
-              <Route path="/questions/" render={(props) => (<QuestionPage token={this.state.token} linkId={this.state.linkId}/>)} />
-              <Route path="/" render={(props) => (<Home setLinkId={this.setLinkId}/>)} />
+              <Route path="/addquestion" render={(props)=>(<QuestionForm token={this.state.token} />)} />
+              <Route path="/questions/" render={(props) => (<QuestionPage token={this.state.token} linkId={this.state.linkId} />)} />
+              <Route path="/" render={(props) => (<Home setLinkId={this.setLinkId} />)} />
             </Switch>
           </div>
         </BrowserRouter>

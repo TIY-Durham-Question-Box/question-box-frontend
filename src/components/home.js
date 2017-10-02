@@ -17,7 +17,7 @@ export default class Home extends Component {
         this.setState({testdata: JSON.parse(res.text)});
       })
   }
-  render() {
+  render(){
     let allQuestions = this.state.testdata;
     let questionLink;
     console.log(allQuestions);

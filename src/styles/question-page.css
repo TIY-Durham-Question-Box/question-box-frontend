@@ -30,3 +30,10 @@
   display: flex;
   flex-direction: column;
 }
+.your-answer-component>form{
+  display: flex;
+  flex-direction: column;
+}
+textarea{
+  border: 1px solid black;
+}
