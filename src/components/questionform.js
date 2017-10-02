@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
+import request from 'superagent';
 
 export default class QuestionForm extends Component {
   constructor(props) {
@@ -35,15 +36,27 @@ export default class QuestionForm extends Component {
       console.log(newquestiondata);
       console.log(JSON.stringify(newquestiondata));
       console.log("Question Submisson fired");
-      var fetchConfig = { method: 'POST',
-                    mode: 'cors',
-                    body: JSON.stringify(newquestiondata),
-                    cache: 'default' };
-      fetch(`https://secure-beyond-80954.herokuapp.com/questions`, fetchConfig)
-      .then(function(res){
-        console.log(res);
+      // var fetchConfig = { method: 'POST',
+      //               headers: new Headers({'Content-Type': 'applicantion/json',
+      //                 'Authorization': `Token token=${this.props.token}`}),
+      //               mode: 'cors',
+      //               body: JSON.stringify(newquestiondata),
+      //               cache: 'default' };
+      // fetch(`https://secure-beyond-80954.herokuapp.com/questions`, fetchConfig)
+      // .then(function(res){
+      request
+        .post(`https://secure-beyond-80954.herokuapp.com/questions`)
+        .send(JSON.stringify(newquestiondata))
+        .set('Authorization', `Token token=${this.props.token}`)
+        .set('Content-Type', 'application/json')
+        .end((err,res)=>{
+          if(err){
+            console.error(err);
+          } else {
+            alert("Question posted!")
+          }
+        })
       //if response 401, say "not authed"
-     })
     }
   }
   handleTextChange = (event) => {

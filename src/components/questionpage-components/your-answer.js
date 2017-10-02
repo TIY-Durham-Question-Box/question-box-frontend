@@ -7,7 +7,7 @@ export default class YourAnswer extends Component {
     this.submitAnswer = this.submitAnswer.bind(this);
   }
 
-  submitAnswer = () => {
+  submitAnswer(){
     let api = 'https://secure-beyond-80954.herokuapp.com';
     console.log(`submitAnswer executed, ${this.props.value}`);
     request
